@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans 'About Us' %} | {% endblock title %}
+
+
+{% block content %}
+{{ object.text }}
+{% endblock content %}

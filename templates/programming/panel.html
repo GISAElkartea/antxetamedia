@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+
+{% block title %}{% trans 'Programming' %} | {% endblock title %}
+
+
+{% block css %}
+<link href="/media/css/programming.css" rel="stylesheet" type="text/css" />
+{% endblock css %}
+
+
+{% block js %}
+<script src="/media/js/jquery.tooltip.js"
+    type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $('#programming td[title]').tooltip()
+    });
+</script>
+{% endblock js %}
+
+
+
+{% block panel %}
+{% if producers %}
+<h4>{% trans 'Producers' %}</h4>
+<ul>
+    {% for object in producers %}
+    <li><span class="color"
+            style="background: {{ object.color }};">&nbsp</span> {{ object }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+{% if categories %}
+<h4>{% trans 'Categories' %}</h4>
+<ul>
+    {% for object in categories %}
+    <li><span class="color"
+            style="background: {{ object.color }};">&nbsp</span> {{ object }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock panel %}

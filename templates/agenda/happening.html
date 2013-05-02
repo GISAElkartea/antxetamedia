@@ -1,0 +1,47 @@
+{% load i18n %}
+
+<div class="happening">
+    <div class="date">
+        <div class="day">{{ object.date.day }}</div>
+        <div class="month">{{ object.date|date:"b"|upper }}</div>
+        {% if object.time %}
+        <div class="time">{{ object.time|time:'H:i' }}</div>
+        {% endif %}
+    </div>
+
+    <div class="header">
+        <div class="place">
+            {{ object.get_town }}{% if object.place %}, {{ object.place }}{% endif %}
+        </div>
+
+        {% if detail %}
+        <h3>{{ object }}</h3>
+        {% else %}
+        <h3><a href="{{ object.get_absolute_url }}">{{ object }}</a></h3>
+        {% endif %}
+    </div>
+
+
+    {% if object.image %}
+    <img src="{{ object.image.url }}" alt="{{ object.image.name }}" />
+    {% endif %}
+
+
+    {% if not detail %}
+    {{ object.description|truncatewords_html:'30' }}
+    {% else %}
+
+    <div class="organizer">{{ object.organizer }}</div>
+    {{ object.description }}
+
+    <div class="more">
+        {% if object.link %}
+        <a href="{{ object.link }}">{% trans 'More' %}</a>
+        {% endif %}
+
+        {% if object.contact %}
+        {% trans 'Contact' %}: {{ object.contact }}
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

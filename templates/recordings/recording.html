@@ -1,0 +1,76 @@
+{% load i18n %}
+
+<div class="recording">
+    <div class="date">{{ object.pub_date }}</div>
+
+    {% with object.categories.select_related as categories %}
+    {% if categories %}
+    <div class="section">
+        {% for object in categories %}
+        <a href="{{ object.get_absolute_url }}">{{ object }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    {% if object.program %}
+    <div class="section">
+        <a href="{% url programs:node object.program.slug %}">{{ object.program }}</a>
+    </div>
+    {% endif %}
+
+    {% if detail %}
+    <h3>{{ object }}</h3>
+    {% else %}
+    <h3><a href="{{ object.get_absolute_url }}">{{ object }}</a></h3>
+    {% endif %}
+
+    {% if object.image %}
+    <img src="{{ object.image.url }}" alt="{{ object.image.name }}" />
+    {% endif %}
+
+    <div class="play">
+        {% with quantity=object.medias.count %}
+        {% for object in object.medias.select_related %}
+        <div>
+            <a class="play" href="{{ object.get_url }}"><img 
+                src="/media/css/img/play.png" alt="{% trans 'Play' %}" /></a>
+            <a class="download" href="{{ object.get_url }}"><img
+                src="/media/css/img/download.png" alt="{% trans 'Download' %}" /></a>
+            {% if object.title and quantity > 1 %}
+            <h6>{{ object.title }}</h6>
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% endwith %}
+    </div>
+
+
+    {% if detail %}
+    {% for object in object.embeded_medias.select_related %}
+    <div class="video">
+        {{ object.embed|safe }}
+    </div>
+    {% endfor %}
+
+    {{ object.text }}
+    {% else %}
+    {{ object.text|truncatewords_html:'50' }}
+    {% endif %}
+
+
+    <p class="more">
+        {% if object.link %}
+        <a href="{{ object.link }}">{% trans 'More' %}</a>
+        {% endif %}
+
+        {% with similars=object.tags.similar_objects %}
+        {% if similars %}
+        {% trans 'Related' %}: 
+        {% for object in similars|slice:'2' %}
+        <a href="{{ object.get_absolute_url }}">{{ object }}</a>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </p>
+</div>

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+
+{% block title %}{% trans 'Multimedia' %} | {% endblock title %}
+
+
+{% block css %}
+<link href="/media/css/multimedia.css" rel="stylesheet" type="text/css" />
+{% endblock css %}
+
+
+{% block content %}
+{% for object in object_list %}
+
+{% if object.link %}
+<div class="video">
+    {{ object.embed|safe }}
+</div>
+{% else %}
+<div class="video player" href="{{ object.get_url }}">
+</div>
+
+{% endif %}
+{% endfor %}
+{% endblock content %}
+
+{% block flowplayer %}
+<script type="text/javascript" encoding="utf-8">
+    $(function() {
+        $f('.player', '/media/flowplayer/flowplayer.swf',
+                {
+                    clip: { autoPlay: false },
+                    plugins: { controls: { 
+                        volume: false,
+                        }}
+                }
+        );
+    });
+</script>
+{% endblock flowplayer %}

@@ -1,0 +1,19 @@
+{% extends 'search/panel.html' %}
+{% load i18n %}
+
+{% block content %}
+{% for result in page.object_list %}
+
+{% if result.object.date %}
+{% include 'agenda/happening.html' with object=result.object detail=0 %}
+{% else %}
+{% include 'recordings/recording.html' with object=result.object detail=0 %}
+{% endif %}
+
+{% empty %}
+{% trans 'There are no results :-/' %}
+{% endfor %}
+
+{% include 'paginator.html' with page_obj=page %}
+
+{% endblock content %}

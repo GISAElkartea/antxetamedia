@@ -1,0 +1,191 @@
+{% load i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}{% endblock title %}AntxetaMedia.info</title>
+        <link href="/media/css/main.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <script src="/media/js/jquery.js" type="text/javascript" 
+            charset="utf-8"></script>
+        <script src="/media/flowplayer/flowplayer.js"
+            type="text/javascript" charset="utf-8"></script>
+        <script src="/media/js/font.js" type="text/javascript" 
+            charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        $(function() {
+            var cookie = readCookie("textsizestyle");
+            textsize = cookie ? cookie : 1;
+            fsize(textsize,'em');
+
+            $('#bigger').click(function() {
+                changetextsize(1)
+            });
+            $('#smaller').click(function() {
+                changetextsize(0)
+            });
+        });
+        </script>
+        <script type="text/javascript" charset="utf-8">
+            function fade(headline) {
+                headline.fadeIn('slow')
+                    .delay(3000)
+                    .fadeOut('fast', function() {
+                        n = headline.next()
+                        if (n.length == 0) {
+                            n = headline.siblings('a').first()
+                        }
+                        fade(n)
+                    });
+            };
+
+            $(function() {
+                var headlines = $('#headlines > a')
+                headlines.fadeOut(0)
+                fade(headlines.first())
+            });
+        </script>
+        {% block css %}
+        {% endblock css %}
+        {% block js %}
+        {% endblock js %}
+    </head>
+
+    <body>
+        <div id="wrap">
+            {% if headlines %}
+            <div id="headlines">
+                <span>{% trans 'Last minute' %}: </span>
+                {% for feed in headlines %}
+                {% for post in feed.posts %}
+                <a href="{{ post.link }}">{{ post.title }}</a>
+                {% endfor %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div id="header"> 
+                <h1><a href="/">
+                    <img id="banner" src="{{ banner.image.url }}" 
+                        alt="{{ banner.name }}"/>
+
+                    {% if banner.with_logo %}
+                    <img id="logo" src="/media/css/img/logo.png"
+                            alt="AntxetaMedia">
+                    {% endif %}
+                </a></h1>
+
+                {% comment %}
+                <div id="font">
+                    <a href="#" id="smaller">A-</a>
+                    <a href="#" id="bigger">A+</a>
+                </div>
+                {% endcomment %}
+            </div>
+
+            <div id="menu">
+                {% include 'menu.html' %}
+            </div>
+
+            <div id="feeds">
+                {% block feeds %}
+                {% endblock feeds %}
+            </div>
+
+            <div id="panel">
+                <div id="listen">
+                    <a href="/media/antxetairratia.m3u"><img 
+                        src="/media/css/img/listen.png" 
+                        alt="{% trans 'Listen live!' %}"/></a>
+                </div>
+
+                {% block panel %}
+                {% endblock panel %}
+            </div>
+
+            <div id="content">
+                {% block content %}
+                <p>{% trans 'There is no content' %}</p>
+                {% endblock content %}
+            </div>
+        </div>
+
+        <div id="footer">
+            <a href="/"><img src="/media/css/img/pausu.png" 
+                alt="PAUSUMEDIA"/></a>
+            <a href="/"><img src="/media/css/img/antxeta.png" 
+                alt="ANTXETA IRRATIA"/></a>
+            <a href="http://euskalirratiak.info/"><img 
+                src="/media/css/img/euskalirratiak.png"
+                alt="EUSKAL IRRATIAK" /></a>
+            <img src="/media/css/img/jaurlaritza.png"
+                alt="EUSKO JAURLARITZA" />
+            <p><a href="/admin/">Kudeatu</a>
+                | <a href="/stats/">Estadistikak</a></p>
+
+            <p>
+            {% trans 'Programming by' %}: 
+            <a href="http://unaizalakain.info/">Unai Zalakain</a>
+            | {% trans 'Graphic design by' %}: 
+            <a href="http://lagunak.gisa-elkartea.org/users/37">Iune Trecet</a></p>
+
+            <p>{% trans 'Source code' %} 
+            <a href="http://svn.unaizalakain.info/webs/antxetamedia.info/"
+                >http://svn.unaizalakain.info/webs/antxetamedia.info/</a></p>
+        </div>
+
+        {% block flowplayer %}
+
+        <div id="container">
+            <div id="object">
+                <a href="#" class="close"><img 
+                    src="/media/css/img/close.png" alt="close" /></a>
+                <div id="player" ></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" charset="utf-8">
+            $f('player', '/media/flowplayer/flowplayer.swf',
+                {
+                    clip: {
+                        autoplay: false,
+                    },
+                    plugins: {
+                        audio: {url: '/media/flowplayer/flowplayer.audio.swf'},
+                        controls: {
+                            fullscreen: false, 
+                            height: 25, 
+                            autoHide: 'fullscreen',
+                            background: '#737e8a',
+                            backgroundGradient: 'low',
+                            durationColor: 'white',
+                            sliderColor: '#a3aeba',
+                            volumeSliderColor: '#a3aeba'
+                        }
+                    }
+                }
+            );
+
+            var player = $f('player')
+            $('a.play').live('click', function(event) {
+                event.preventDefault()
+                player.play($(this).attr('href'))
+                var type = player.getClip().type
+                $('#container').attr('class', type)
+
+                $('a.play > img').attr('src', '/media/css/img/play.png')
+                $(this).children('img').attr('src', '/media/css/img/playing.gif')
+            });
+
+            $('#container a.close').click(function(event) {
+                event.preventDefault()
+                player.stop()
+                $('#container').attr('class', '')
+            });
+        </script>
+
+        {% endblock flowplayer %}
+    </body>
+</html>
+

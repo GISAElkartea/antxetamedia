@@ -1,0 +1,37 @@
+{% extends 'recordings/programs/panel.html' %}
+{% load i18n %}
+
+{% block title %}
+{% if reason %}{{ reason }} | {% endif %}{% trans 'Programs' %} | 
+{% endblock title %}
+
+
+{% block content %}
+{% if reason %}
+<div id="reason">
+    <h2>{{ reason }}</h2>
+    {% if reason.image %}
+    <img src="{{ reason.image.url }}" alt="{{ reason.image.name }}" />
+    {% endif %}
+
+    {% if reason.description|striptags %}
+    {{ reason.description }}
+    {% endif %}
+
+    {% if reason.link %}
+    <p class="link"><a href="{{ reason.link }}">{% trans 'More' %}</a></p>
+    {% endif %}
+</div>
+{% endif %}
+
+{% for object in node_list %}
+<h3 class="node"><a href="{% url programs:node object.slug %}">{{ object }}</a></h3>
+{% endfor %}
+
+
+{% for object in object_list %}
+{% include 'recordings/recording.html' with object=object detail=0 %}
+{% endfor %}
+
+{% include 'paginator.html' %}
+{% endblock content %}

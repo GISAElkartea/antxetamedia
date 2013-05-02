@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load i18n uni_form_tags %}
+
+
+{% block title %}
+{% trans 'Search' %} | 
+{% endblock title %}
+
+
+{% block css %}
+<link href="/media/css/recordings.css" rel="stylesheet" type="text/css" />
+<link href="/media/css/agenda.css" rel="stylesheet" type="text/css" />
+<link href="/media/css/search.css" rel="stylesheet" type="text/css" />
+<link href="/media/js/jquery.datepicker/datepicker.css" 
+    rel="stylesheet" type="text/css" />
+{% endblock css %}
+
+
+{% block js %}
+<script src="/media/js/jquery.datepicker/datepicker.js" type="text/javascript"
+    encoding="utf-8"></script>
+<script src="/media/js/jquery.datepicker/datepicker.eu.js" type="text/javascript"
+    encoding="utf-8"></script>
+<script type="text/javascript" encoding="utf-8">
+    $(function() {
+        $.datepicker.setDefaults($.datepicker.regional['eu']);
+        $('input#id_from_date, input#id_to_date').datepicker({
+            showButtonPanel: true,
+            dateFormat: 'yy/mm/dd',
+            firstDay: 1,
+        });
+    });
+</script>
+{% endblock js %}
+
+
+{% block panel %}
+<h4>{% trans 'Search' %}</h4>
+{% uni_form form form.helper %}
+{% endblock panel %}

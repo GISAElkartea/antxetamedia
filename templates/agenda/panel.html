@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load i18n dajaxice_templatetags %}
+
+
+{% block css %}
+<link href="/media/css/agenda.css" rel="stylesheet" type="text/css" />
+<link href="/media/js/jquery.datepicker/datepicker.css" rel="stylesheet"
+    type="text/css" />
+{% endblock css %}
+
+
+{% block js %}
+{% dajaxice_js_import '/media/js/dajaxice.core.js' %}
+<script src="/media/js/jquery.datepicker/datepicker.js" 
+    type="text/javascript"></script>
+<script src="/media/js/jquery.datepicker/datepicker.eu.js" 
+    type="text/javascript"></script>
+<script type="text/javascript" encoding="utf-8">
+function upgrade(data) {
+    $('#agenda td > a').each(function() {
+        day = $(this)
+        day.parent().removeAttr('onclick')
+
+        d = day.text()
+        if (d in data) {
+            day.parent().addClass('fill')
+            day.attr('href', data[d])
+        } else {
+            day.removeAttr('href')
+        };
+    });
+}
+function update(year, month, inst) {
+    Dajaxice.agenda.happenings_for_month(upgrade,
+        {'year': year, 'month': month})
+}
+$(function() {
+    $.datepicker.setDefaults($.datepicker.regional['eu']);
+    $('#agenda').datepicker({
+        dateFormat: 'yy/mm/dd',
+        firstDay: 1,
+        onChangeMonthYear: update,
+    });
+    if ('{{ day }}'.length != 0) {
+        $('#agenda').datepicker('setDate', '{{ day|date:'Y/m/d' }}')
+        update('{{ day.year }}', '{{ day.month }}')
+    } else {
+        update()
+    };
+});
+</script>
+{% endblock js %}
+
+
+{% block feeds %}
+<a href="{% url agenda:feed %}"><img src="/media/css/img/feed.png"
+    alt="feeds" /></a>
+{% endblock feeds %}
+
+
+{% block panel %}
+<div id="agenda"></div>
+
+<h4>{% trans 'Towns' %}</h4>
+<ul>
+    {% for object in towns %}
+    <li><a href="{% url agenda:town object.slug %}">{{ object }}</a></li>
+    {% endfor %}
+    <li><a href="{% url agenda:other_town %}">{% trans 'Others' %}</a></li>
+</ul>
+
+<h4><a href="{% url agenda:create %}">{% trans 'Sumbit your happening!' %}</a><h4>
+{% endblock panel %}

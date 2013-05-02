@@ -1,0 +1,64 @@
+{% extends 'programming/panel.html' %}
+{% load i18n %}
+
+
+{% block content %}
+
+<table id="programming">
+    <th></th>
+
+    {% for object in weekdays %}
+    <th>{{ object }}</th>
+    {% endfor %}
+
+    {% for space,weekdays in spaces %}
+    <tr>
+        <th class="hour">{{ space|time:'H:i' }}</th>
+
+        {% for object in weekdays.values %}
+        <td
+            {% if object.emission %}
+            title="{{ object.beginning|time:'H:i' }}-{{ object.ending|time:'H:i' }}"
+            {% endif %}
+
+            {% if object %}style="
+            border-color: {{ object.emission.producer.color }};
+
+            {% if space == object.get_first %}
+            border-top-width: .3em;
+            {% endif %}
+            {% if space == object.get_last %}
+            border-bottom-width: .3em;
+            {% endif %}
+            {% if not object.has_yesterday %}
+            border-left-width: .3em;
+            {% endif %}
+            {% if not object.has_tomorrow %}
+            border-right-width: .3em;
+            {% endif %}
+
+            background: {{ object.emission.category.color }};
+            "{% endif %}>
+
+            {% if space == object.rounded_beginning.time and not object.has_yesterday %}
+            <p>
+
+            {% if object.emission.program %}
+            <a href="{% url programs:node object.emission.program.slug %}"
+                >{{ object.emission }}</a>
+            {% else %}
+            {% if object.emission.link %}
+            <a href="{{ object.emission.link }}">{{ object.emission }}</a>
+            {% else %}
+            {{ object.emission }}
+            {% endif %}
+            {% endif %}
+
+            </p>
+            {% endif %}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

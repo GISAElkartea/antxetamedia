@@ -1,0 +1,22 @@
+{% extends 'recordings/interviews/panel.html' %}
+{% load i18n %}
+
+{% block title %}
+{% if reason %}{{ reason }} | {% endif %}{% trans 'Interviews' %} | 
+{% endblock title %}
+
+
+{% block content %}
+{% if reason %}
+<div id="reason">
+    <h2>{{ reason }}</h2>
+    {% if reason.description|striptags %}{{ reason.description }}{% endif %}
+</div>
+{% endif %}
+
+{% for object in object_list %}
+{% include 'recordings/recording.html' with object=object detail=0 %}
+{% endfor %}
+
+{% include 'paginator.html' %}
+{% endblock content %}

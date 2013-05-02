@@ -1,0 +1,51 @@
+{% load i18n %}
+<ul class="one">
+    <li><a href="{% url news:list %}">{% trans 'News' %}</a>
+        {% if news_categories %}
+        <ul class="two">
+            {% for category in news_categories %}
+            <li><a href="{% url news:category category.slug %}">{{ category }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+
+    {% for node in nodes_on_menu %}
+    <li><a href="{% url programs:node node.slug %}">{{ node }}</a>
+        <ul class="two">
+            {% for child in node.children_set.all %}
+            <li><a href="{% url programs:node child.slug %}">{{ child }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+
+    <li><a href="{% url programs:list %}">{% trans 'Programs' %}</a>
+    <ul class="two">
+        {% for root_node in root_nodes %}
+        <li><a href="{% url programs:node root_node.slug %}">{{ root_node }}</a>
+        <ul class="three">
+            {% for node in root_node.children_set.all %}
+            <li><a href="{% url programs:node node.slug %}">{{ node }}</a>
+            <ul class="four">
+                {% for child in node.children_set.all %}
+                <li><a href="{% url programs:node child.slug %}">{{ child }}</a></li>
+                {% endfor %}
+            </ul>
+            </li>
+            {% endfor %}
+        </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    </li>
+
+    <li><a href="{% url programming:table %}">Programazioa</a></li>
+    <li><a href="{% url agenda:list %}">Agenda</a></li>
+    <li><a href="{% url misc:aboutus %}">Nor Gara</a></li>
+</ul>
+
+<form method="get" action="{% url search:search %}">{% csrf_token %}
+    <input name="q" type="text" value="{% trans 'Search' %}" 
+    onclick="this.value = ''"/>
+</form>

@@ -1,0 +1,12 @@
+{% extends 'recordings/programs/panel.html' %}
+{% load i18n %}
+
+
+{% block title %}
+{{ object }} | {% trans 'Programs' %} | 
+{% endblock title %}
+
+
+{% block content %}
+{% include 'recordings/recording.html' with object=object detail=1 %}
+{% endblock content %}

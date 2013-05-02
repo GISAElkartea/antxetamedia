@@ -1,0 +1,12 @@
+{% extends 'agenda/panel.html' %}
+{% load i18n %}
+
+
+{% block title %}
+{{ object }} | {% trans 'Agenda' %} | 
+{% endblock title %}
+
+
+{% block content %}
+{% include 'agenda/happening.html' with object=object detail=1 %}
+{% endblock content %}

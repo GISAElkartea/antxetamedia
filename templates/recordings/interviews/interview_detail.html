@@ -1,0 +1,12 @@
+{% extends 'recordings/interviews/panel.html' %}
+{% load i18n %}
+
+
+{% block title %}
+{{ object }} | {% trans 'Interviews' %} | 
+{% endblock title %}
+
+
+{% block content %}
+{% include 'recordings/recording.html' with object=object detail=1 %}
+{% endblock content %}

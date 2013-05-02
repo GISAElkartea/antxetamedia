@@ -1,0 +1,588 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-29 01:11+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: dashboard.py:25
+msgid "Recordings"
+msgstr "Grabaketak"
+
+#: dashboard.py:36 templates/multimedia/video_list.html:5
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: dashboard.py:47 templates/frontpage.html:96
+#: templates/agenda/happening_detail.html:6
+#: templates/agenda/happening_list.html:6
+msgid "Agenda"
+msgstr "Agenda"
+
+#: dashboard.py:58
+msgid "Structure"
+msgstr "Egitura"
+
+#: dashboard.py:68 templates/programming/panel.html:5
+msgid "Programming"
+msgstr "Programazioa"
+
+#: dashboard.py:80 templates/agenda/panel.html:69
+msgid "Others"
+msgstr "Bestelakoak"
+
+#: dashboard.py:95
+msgid "Administrator"
+msgstr "Kudeatzailea"
+
+#: dashboard.py:107
+msgid "Latest Actions"
+msgstr "Azkeneko ekintzak"
+
+#: dashboard.py:113 templates/agenda/happening.html:43
+msgid "Contact"
+msgstr "Kontaktua"
+
+#: dashboard.py:122
+msgid "Help"
+msgstr "Laguntza"
+
+#: agenda/admin.py:21 agenda/forms.py:23
+msgid "When and where"
+msgstr "Noiz eta non"
+
+#: agenda/admin.py:23 agenda/forms.py:28 programming/admin.py:18
+#: recordings/admin.py:31 recordings/admin.py:45 structure/admin.py:17
+msgid "Details"
+msgstr "Xehetasunak"
+
+#: agenda/feeds.py:8
+msgid "Agenda of Antxetamedia"
+msgstr "Antxetamediaren agenda"
+
+#: agenda/forms.py:18
+msgid "Submit!"
+msgstr "Bidali!"
+
+#: agenda/models.py:11
+msgid "town"
+msgstr "herria"
+
+#: agenda/models.py:12
+msgid "towns"
+msgstr "herriak"
+
+#: agenda/models.py:14 agenda/models.py:36 misc/models.py:23 misc/models.py:92
+#: multimedia/models.py:46 programming/models.py:18 programming/models.py:42
+#: recordings/models.py:24 structure/models.py:22
+msgid "name"
+msgstr "izena"
+
+#: agenda/models.py:32
+msgid "Happening"
+msgstr "Gertakaria"
+
+#: agenda/models.py:33
+msgid "Happenings"
+msgstr "Gertakariak"
+
+#: agenda/models.py:37
+msgid "organizer"
+msgstr "antolatzailea"
+
+#: agenda/models.py:38 structure/models.py:23
+msgid "description"
+msgstr "deskribapena"
+
+#: agenda/models.py:41
+msgid "date"
+msgstr "data"
+
+#: agenda/models.py:42
+msgid "time"
+msgstr "ordua"
+
+#: agenda/models.py:45
+msgid "other"
+msgstr "bestelakoa"
+
+#: agenda/models.py:46
+msgid "place"
+msgstr "tokia"
+
+#: agenda/models.py:48 misc/models.py:93 recordings/models.py:50
+#: structure/models.py:29
+msgid "image"
+msgstr "irudia"
+
+#: agenda/models.py:49 misc/models.py:42 misc/models.py:45
+#: multimedia/models.py:30 programming/models.py:46 recordings/models.py:48
+#: structure/models.py:28
+msgid "link"
+msgstr "lotura"
+
+#: agenda/models.py:50
+msgid "contact"
+msgstr "kontaktua"
+
+#: agenda/views.py:39
+msgid "Other"
+msgstr "Bestelakoa"
+
+#: misc/models.py:18
+msgid "Low"
+msgstr "Baxua"
+
+#: misc/models.py:19
+msgid "Medium"
+msgstr "Ertaina"
+
+#: misc/models.py:20
+msgid "High"
+msgstr "Altua"
+
+#: misc/models.py:24
+msgid "priority"
+msgstr "lehentasuna"
+
+#: misc/models.py:33
+msgid "widget"
+msgstr "widgeta"
+
+#: misc/models.py:34
+msgid "widgets"
+msgstr "widgetak"
+
+#: misc/models.py:36 misc/models.py:118 recordings/models.py:43
+msgid "text"
+msgstr "testua"
+
+#: misc/models.py:43
+msgid "links"
+msgstr "loturak"
+
+#: misc/models.py:51
+msgid "feed"
+msgstr "RSS"
+
+#: misc/models.py:52
+msgid "feeds"
+msgstr "RSSak"
+
+#: misc/models.py:55
+msgid "Headline"
+msgstr "Titularra"
+
+#: misc/models.py:56
+msgid "Panel"
+msgstr "Panela"
+
+#: misc/models.py:59
+msgid "url"
+msgstr "url"
+
+#: misc/models.py:59
+msgid "URL of the RSS"
+msgstr "RSSaren URLa"
+
+#: misc/models.py:60
+msgid "where"
+msgstr "non"
+
+#: misc/models.py:61
+msgid "Where is the feed shown?"
+msgstr "Non azaltzen da RSSa?"
+
+#: misc/models.py:62
+msgid "how many"
+msgstr "zenbat"
+
+#: misc/models.py:63
+msgid "How many feeds must we have?"
+msgstr "Zenbat jario behar ditugu?"
+
+#: misc/models.py:88
+msgid "banner"
+msgstr "banerra"
+
+#: misc/models.py:89
+msgid "banners"
+msgstr "banerrak"
+
+#: misc/models.py:94
+msgid "active"
+msgstr "aktiboa"
+
+#: misc/models.py:95
+msgid "with logo"
+msgstr "logoarekin"
+
+#: misc/models.py:115 misc/models.py:116 misc/models.py:121
+msgid "about us"
+msgstr "nortzuk gara"
+
+#: multimedia/admin.py:20 multimedia/admin.py:34
+#: templates/recordings/recording.html:69
+msgid "Related"
+msgstr "erlazionatua"
+
+#: multimedia/admin.py:73
+msgid "Synchronized"
+msgstr "Sinkronizatua"
+
+#: multimedia/admin.py:92
+msgid "Mark for synchronization"
+msgstr "Sinkronizatua izateko markatu"
+
+#: multimedia/models.py:27
+msgid "embeded media"
+msgstr "kanpoko media"
+
+#: multimedia/models.py:28
+msgid "embeded medias"
+msgstr "kanpoko mediak"
+
+#: multimedia/models.py:31
+msgid "embed code"
+msgstr "kanpoko kodea"
+
+#: multimedia/models.py:43
+msgid "account"
+msgstr "kontua"
+
+#: multimedia/models.py:44
+msgid "accounts"
+msgstr "kontuak"
+
+#: multimedia/models.py:47
+msgid "user"
+msgstr "erabiltzailea"
+
+#: multimedia/models.py:48
+msgid "password"
+msgstr "pasahitza"
+
+#: multimedia/models.py:56
+msgid "media"
+msgstr "media"
+
+#: multimedia/models.py:57
+msgid "medias (audio: MP3 | video: FLV,MP4,H.264)"
+msgstr "mediak (audioa: MP3 | bideoa: FLV,MP4,H.264)"
+
+#: multimedia/models.py:59 recordings/models.py:59 recordings/models.py:103
+msgid "title"
+msgstr "izenburua"
+
+#: multimedia/models.py:63
+msgid "mark for synchronization"
+msgstr "sinkronizatua izateko markatu"
+
+#: multimedia/models.py:64
+msgid "synchronization state"
+msgstr "sinkronizazio egoera"
+
+#: multimedia/models.py:68
+msgid "file"
+msgstr "fitxategia"
+
+#: multimedia/models.py:69
+msgid "Blank if synchronized"
+msgstr "Hutsa sinkronizatua badago"
+
+#: multimedia/models.py:80
+msgid "There must be a file to upload"
+msgstr "Igotzeko fitxategi bat egon behar da"
+
+#: programming/admin.py:29 programming/models.py:19
+msgid "color"
+msgstr "kolorea"
+
+#: programming/models.py:27
+msgid "producer"
+msgstr "ekoizlea"
+
+#: programming/models.py:28
+msgid "producers"
+msgstr "ekoizleak"
+
+#: programming/models.py:33
+msgid "category"
+msgstr "kategoria"
+
+#: programming/models.py:34 recordings/models.py:64
+msgid "categories"
+msgstr "kategoriak"
+
+#: programming/models.py:39
+msgid "emission"
+msgstr "emankizuna"
+
+#: programming/models.py:40
+msgid "emissions"
+msgstr "emankizunak"
+
+#: programming/models.py:55
+msgid "space"
+msgstr "tartea"
+
+#: programming/models.py:56
+msgid "spaces"
+msgstr "tarteak"
+
+#: programming/models.py:60
+msgid "weeday"
+msgstr "asteko eguna"
+
+#: programming/models.py:61
+msgid "beginning"
+msgstr "hasiera"
+
+#: programming/models.py:62
+msgid "ending"
+msgstr "bukaera"
+
+#: recordings/models.py:21
+msgid "news category"
+msgstr "berrien kategoria"
+
+#: recordings/models.py:22
+msgid "news categories"
+msgstr "berrien kategoriak"
+
+#: recordings/models.py:40
+msgid "principal"
+msgstr "nagusia"
+
+#: recordings/models.py:41
+msgid "publication date"
+msgstr "argitarapen data"
+
+#: recordings/models.py:55
+msgid "news "
+msgstr "berria"
+
+#: recordings/models.py:56
+msgid "news"
+msgstr "berriak"
+
+#: recordings/models.py:99 recordings/models.py:111
+msgid "program"
+msgstr "irratsaioa"
+
+#: recordings/models.py:100
+msgid "programs"
+msgstr "irratsaioak"
+
+#: recordings/models.py:104
+msgid "Left empty if full program"
+msgstr "Hutsik utzi saio osoa bada"
+
+#: recordings/models.py:106
+msgid "type"
+msgstr "mota"
+
+#: recordings/models.py:107
+msgid "interview"
+msgstr "elkarrizketa"
+
+#: recordings/models.py:108
+msgid "full program"
+msgstr "saio osoa"
+
+#: recordings/models.py:129
+msgid "You must set a title for an interview"
+msgstr "Elkarrizketa baterako izenburua behar da"
+
+#: recordings/interviews/feeds.py:10
+msgid "Interviews of Antxetamedia"
+msgstr "Antxetamediako elkarrizketak"
+
+#: recordings/news/feeds.py:10
+msgid "News of Antxetamedia"
+msgstr "Antxetamediako berriak"
+
+#: recordings/programs/feeds.py:10
+msgid "Programs of Antxetamedia"
+msgstr "Antxetamediako saioak"
+
+#: search/forms.py:11
+msgid "From"
+msgstr "Noiztik"
+
+#: search/forms.py:12
+msgid "To"
+msgstr "Nora"
+
+#: search/forms.py:16
+msgid "What?"
+msgstr "Zer?"
+
+#: search/forms.py:17
+msgid "Where?"
+msgstr "Non?"
+
+#: search/forms.py:38 templates/menu.html:49 templates/search/panel.html:6
+#: templates/search/panel.html.py:38
+msgid "Search"
+msgstr "Bilatu"
+
+#: structure/models.py:19
+msgid "node"
+msgstr "nodoa"
+
+#: structure/models.py:20
+msgid "nodes"
+msgstr "nodoak"
+
+#: structure/models.py:25
+msgid "on menu"
+msgstr "menuan"
+
+#: structure/models.py:26
+msgid "on frontpage"
+msgstr "portadan"
+
+#: structure/models.py:34
+msgid "parent"
+msgstr "gurasoa"
+
+#: templates/404.html:4
+msgid "We have no answer to this"
+msgstr "Ez daukagu honentzat erantzunik"
+
+#: templates/404.html:8
+#, python-format
+msgid ""
+"\n"
+"We are sorry, but we have no aswer to \"%(path)s\".\n"
+"If this is our fault, don't worry, it will be soon solved.\n"
+msgstr ""
+"\n"
+"Sentitzen dugu baino ez daukagu erantzunik \"%(path)s\"ri.\n"
+"Gure errua bada, ez arduratu, laister konpondua izango da.\n"
+
+#: templates/base.html:59
+msgid "Last minute"
+msgstr "Azken ordua"
+
+#: templates/base.html:101
+msgid "Listen live!"
+msgstr "Entzun zuzenean!"
+
+#: templates/base.html:110
+msgid "There is no content"
+msgstr "Ez dago edukirik"
+
+#: templates/base.html:129
+msgid "Programming by"
+msgstr "Programazioa"
+
+#: templates/base.html:131
+msgid "Graphic design by"
+msgstr "Diseinu grafikoa"
+
+#: templates/base.html:134
+msgid "Source code"
+msgstr "Iturburu kodea"
+
+#: templates/frontpage.html:36
+msgid "Links"
+msgstr "Loturak"
+
+#: templates/frontpage.html:47
+msgid "Feeds"
+msgstr "RSSak"
+
+#: templates/frontpage.html:67 templates/menu.html:3
+#: templates/recordings/news/news_detail.html:6
+#: templates/recordings/news/news_list.html:6
+msgid "News"
+msgstr "Berriak"
+
+#: templates/frontpage.html:84 templates/frontpage.html.py:113
+#: templates/frontpage.html:143 templates/recordings/recording.html:37
+msgid "Play"
+msgstr "Entzun"
+
+#: templates/frontpage.html:156
+msgid "Videos"
+msgstr "Bidioak"
+
+#: templates/menu.html:23 templates/recordings/programs/panel.html:19
+#: templates/recordings/programs/program_detail.html:6
+#: templates/recordings/programs/program_list.html:5
+msgid "Programs"
+msgstr "Irratsaioak"
+
+#: templates/paginator.html:6
+msgid "Previous"
+msgstr "Aurrekoa"
+
+#: templates/paginator.html:20
+msgid "Next"
+msgstr "Hurrengoa"
+
+#: templates/aboutus/aboutus.html:4
+msgid "About Us"
+msgstr "Nortzuk Gara"
+
+#: templates/agenda/happening.html:39 templates/recordings/recording.html:64
+#: templates/recordings/programs/program_list.html:22
+msgid "More"
+msgstr "Info+"
+
+#: templates/agenda/happening_form.html:31
+msgid "Add your happening!"
+msgstr "Zure gertakaria gehitu!"
+
+#: templates/agenda/panel.html:64
+msgid "Towns"
+msgstr "Herriak"
+
+#: templates/agenda/panel.html:72
+msgid "Sumbit your happening!"
+msgstr "Zure gertakaria bidali!"
+
+#: templates/programming/panel.html:27
+msgid "Producers"
+msgstr "Ekoizleak"
+
+#: templates/programming/panel.html:39
+msgid "Categories"
+msgstr "Kategoriak"
+
+#: templates/recordings/recording.html:39
+msgid "Download"
+msgstr "Jeitsi"
+
+#: templates/recordings/interviews/interview_detail.html:6
+#: templates/recordings/interviews/interview_list.html:5
+msgid "Interviews"
+msgstr "Elkarrizketak"
+
+#: templates/recordings/interviews/panel.html:18
+#: templates/recordings/news/panel.html:18
+#: templates/recordings/programs/panel.html:29
+msgid "Latest"
+msgstr "Azkenekoak"
+
+#: templates/search/search_list.html:14
+msgid "There are no results :-/"
+msgstr "Ez dago emantzarik :-/"
+
+#~ msgid "blip media"
+#~ msgstr "blip-eko media"

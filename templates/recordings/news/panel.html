@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+
+{% block css %}
+<link href="/media/css/recordings.css" rel="stylesheet" type="text/css" />
+<link href="/media/css/multimedia.css" rel="stylesheet" type="text/css" />
+{% endblock css %}
+
+{% block feeds %}
+<a href="{% url news:feed %}"><img src="/media/css/img/feed.png"
+    alt="feeds" /></a>
+{% endblock feeds %}
+
+
+{% block panel %}
+{% if latest %}
+<h4>{% trans 'Latest' %}</h4>
+<ul>
+    {% for object in latest %}
+    <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+{% comment %}
+{% get_tagcloud as tags for 'recordings.News' %}
+{% if tags %}
+<div class="tagcloud">
+    {% for object in tags %}
+    <a class="tag-{{ object.weight|floatformat:0 }}"
+        href="{% url news:tag object.slug %}">{{ object }}</a>
+    {% endfor %}
+</div>
+{% endif %}
+{% endcomment %}
+
+{% endblock panel %}

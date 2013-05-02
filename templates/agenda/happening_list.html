@@ -1,0 +1,26 @@
+{% extends 'agenda/panel.html' %}
+{% load i18n %}
+
+
+{% block title %}
+{% if reason %}{{ reason }} | {% endif %}{% trans 'Agenda' %} | 
+{% endblock title %}
+
+
+{% block content %}
+{% if reason or day %}
+<div id="reason">
+    {% if reason %}
+    <h2>{{ reason }}</h2>
+    {% else %}
+    <h2>{{ day }}</h2>
+    {% endif %}
+</div>
+{% endif %}
+
+{% for object in object_list %}
+{% include 'agenda/happening.html' with object=object detail=0 %}
+{% endfor %}
+
+{% include 'paginator.html' %}
+{% endblock content %}

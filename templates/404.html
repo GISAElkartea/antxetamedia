@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans 'We have no answer to this' %} | {% endblock title %}
+
+{% block content %}
+<p>
+{% blocktrans with path=request.path %}
+We are sorry, but we have no aswer to "{{ path }}".
+If this is our fault, don't worry, it will be soon solved.
+{% endblocktrans %}
+</p>
+{% endblock content %}

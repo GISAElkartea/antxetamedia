@@ -1,0 +1,7 @@
+{{ object.name }}
+{{ object.organizer }}
+{{ object.description }}
+{{ object.date }}
+{{ object.town }}
+{{ object.other_town }}
+{{ object.place }}
