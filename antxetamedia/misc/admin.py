@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from misc.models import Widget, Feed, Link, Banner, AboutUs
+from antxetamedia.misc.models import Widget, Feed, Link, Banner, AboutUs
 
 from antxetamedia.tools import admin_color, admin_image
 
