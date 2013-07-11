@@ -1,7 +1,7 @@
 from haystack.indexes import *
 from haystack import site
 
-from recordings.models import News, Program
+from antxetamedia.recordings.models import News, Program
 
 class RecordingIndex(SearchIndex):
     text = CharField(document=True, use_template=True)

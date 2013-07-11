@@ -8,8 +8,8 @@ admin.autodiscover()
 from dajaxice.core import dajaxice_autodiscover
 dajaxice_autodiscover()
 
-from sitemaps import sitemaps
-from views import FrontPageView
+from antxetamedia.sitemaps import sitemaps
+from antxetamedia.views import FrontPageView
 
 
 urlpatterns = patterns('',

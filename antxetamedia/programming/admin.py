@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext as _
 
-from programming.models import Producer, Category, Emission, Space
+from antxetamedia.programming.models import Producer, Category, Emission, Space
 
 
 class SpaceAdmin(admin.TabularInline):

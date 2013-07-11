@@ -1,7 +1,7 @@
 from haystack.indexes import *
 from haystack import site
 
-from agenda.models import Happening
+from antxetamedia.agenda.models import Happening
 
 
 class HappeningIndex(SearchIndex):

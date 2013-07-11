@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand
 
 from sys import stdout
 
-from misc.models import Feed
+from antxetamedia.misc.models import Feed
 
 
 class Command(BaseCommand):

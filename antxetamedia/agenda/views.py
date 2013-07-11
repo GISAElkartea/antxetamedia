@@ -5,8 +5,8 @@ from django.views.generic import ListView, DetailView, DayArchiveView, CreateVie
 
 from datetime import date
 
-from agenda.forms import HappeningForm
-from agenda.models import Town, Happening
+from antxetamedia.agenda.forms import HappeningForm
+from antxetamedia.agenda.models import Town, Happening
 
 
 class BaseHappeningList(ListView):

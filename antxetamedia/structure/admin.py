@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.utils.translation import gettext as _
 
-from structure.models import Node
-from structure.forms import NodeForm
-from tools import admin_image
+from antxetamedia.structure.models import Node
+from antxetamedia.structure.forms import NodeForm
+from antxetamedia.tools import admin_image
 
 class NodeAdmin(admin.ModelAdmin):
     form = NodeForm

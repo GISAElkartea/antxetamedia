@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 
-from recordings.programs.feeds import ProgramFeed
-from recordings.programs.views import ProgramList, NodeProgramList, \
+from antxetamedia.recordings.programs.feeds import ProgramFeed
+from antxetamedia.recordings.programs.views import ProgramList, NodeProgramList, \
         TagProgramList, ProgramDetail
 
 

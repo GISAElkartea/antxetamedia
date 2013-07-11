@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.utils.translation import ugettext as _
 
-from tools import admin_image
-from agenda.models import Town, Happening
+from antxetamedia.tools import admin_image
+from antxetamedia.agenda.models import Town, Happening
 
 
 class TownAdmin(admin.ModelAdmin):

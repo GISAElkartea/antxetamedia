@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 
-from multimedia.views import OrphanedMediaList
+from antxetamedia.multimedia.views import OrphanedMediaList
 
 
 urlpatterns = patterns('',

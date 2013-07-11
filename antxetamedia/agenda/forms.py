@@ -5,7 +5,7 @@ from django.utils.translation import ugettext as _
 from uni_form.helpers import FormHelper, Submit, Layout, Fieldset
 from uni_form import helpers
 
-from agenda.models import Happening
+from antxetamedia.agenda.models import Happening
 
 
 class HappeningForm(forms.ModelForm):

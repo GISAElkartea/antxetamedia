@@ -1,6 +1,6 @@
 from django import forms
 
-from structure.models import Node
+from antxetamedia.structure.models import Node
 
 
 class NodeForm(forms.ModelForm):

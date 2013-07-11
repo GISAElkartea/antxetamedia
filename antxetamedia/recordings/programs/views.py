@@ -3,8 +3,8 @@ from django.shortcuts import get_object_or_404
 
 from taggit.models import Tag, TaggedItem
 
-from structure.models import Node
-from recordings.models import Program
+from antxetamedia.structure.models import Node
+from antxetamedia.recordings.models import Program
 
 
 def context():

@@ -4,8 +4,8 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib import messages
 from django.utils.translation import ugettext as _
 
-from multimedia.models import Account, Media, EmbededMedia
-from multimedia.forms import AccountForm
+from antxetamedia.multimedia.models import Account, Media, EmbededMedia
+from antxetamedia.multimedia.forms import AccountForm
 
 class AccountAdmin(admin.ModelAdmin):
     form = AccountForm

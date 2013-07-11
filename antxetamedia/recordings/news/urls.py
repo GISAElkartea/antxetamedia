@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 
-from recordings.news.feeds import NewsFeed
-from recordings.news.views import NewsList, CategoryNewsList, TagNewsList,\
+from antxetamedia.recordings.news.feeds import NewsFeed
+from antxetamedia.recordings.news.views import NewsList, CategoryNewsList, TagNewsList,\
         NewsDetail
 
 

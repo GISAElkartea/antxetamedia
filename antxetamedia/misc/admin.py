@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from misc.models import Widget, Feed, Link, Banner, AboutUs
 
-from tools import admin_color, admin_image
+from antxetamedia.tools import admin_color, admin_image
 
 
 class MiscAdmin(admin.ModelAdmin):

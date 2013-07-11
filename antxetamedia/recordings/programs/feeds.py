@@ -3,7 +3,7 @@ from django.utils.translation import ugettext as _
 
 from datetime import datetime, time
 
-from recordings.models import Program
+from antxetamedia.recordings.models import Program
 
 
 class ProgramFeed(Feed):

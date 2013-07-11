@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 
-from agenda.feeds import HappeningFeed
-from agenda.views import FutureHappeningList, OtherTownHappeningList, \
+from antxetamedia.agenda.feeds import HappeningFeed
+from antxetamedia.agenda.views import FutureHappeningList, OtherTownHappeningList, \
         TownHappeningList, DayHappeningList, HappeningDetail, \
         CreateHappening, SuccessfulCreate
 

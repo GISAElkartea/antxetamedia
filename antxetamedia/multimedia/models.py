@@ -13,7 +13,7 @@ from os.path import join, basename, splitext
 from itertools import chain
 from operator import attrgetter
 
-from multimedia.handlers import upload
+from antxetamedia.multimedia.handlers import upload
 
 
 def get_orphaned_media():

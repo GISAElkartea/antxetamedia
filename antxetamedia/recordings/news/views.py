@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404
 
 from taggit.models import Tag, TaggedItem
 
-from recordings.models import News, NewsCategory
+from antxetamedia.recordings.models import News, NewsCategory
 
 
 def context():

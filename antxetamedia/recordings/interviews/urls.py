@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 
-from recordings.interviews.feeds import InterviewFeed
-from recordings.interviews.views import NodeInterviewList, TagInterviewList,\
+from antxetamedia.recordings.interviews.feeds import InterviewFeed
+from antxetamedia.recordings.interviews.views import NodeInterviewList, TagInterviewList,\
         InterviewDetail
 
 urlpatterns = patterns('',

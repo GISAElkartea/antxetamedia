@@ -1,6 +1,6 @@
 from haystack.views import SearchView as HSearchView
 
-from search.forms import SearchForm
+from antxetamedia.search.forms import SearchForm
 
 
 class SearchView(HSearchView):

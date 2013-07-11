@@ -3,7 +3,7 @@ from django.core.mail import mail_admins
 
 from haystack import site
 
-from multimedia.models import Media
+from antxetamedia.multimedia.models import Media
 
 
 class Command(BaseCommand):

@@ -7,7 +7,7 @@ from haystack import site
 from os.path import join
 from sys import stdout
 
-from multimedia.models import Media
+from antxetamedia.multimedia.models import Media
 
 BLIP_URL = 'http://blip.tv/file/get/'
 

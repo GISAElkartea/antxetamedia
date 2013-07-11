@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.utils.translation import ugettext as _
 
-from tools import admin_image
-from recordings.models import News, NewsCategory, Program
-from multimedia.admin import MediaInline, EmbededMediaInline,\
+from antxetamedia.tools import admin_image
+from antxetamedia.recordings.models import News, NewsCategory, Program
+from antxetamedia.multimedia.admin import MediaInline, EmbededMediaInline,\
         MediaRelated
 
 

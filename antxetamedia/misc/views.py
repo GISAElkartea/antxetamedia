@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 
-from misc.models import AboutUs
+from antxetamedia.misc.models import AboutUs
 
 
 class AboutUsView(TemplateView):

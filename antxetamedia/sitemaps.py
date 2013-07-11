@@ -1,7 +1,7 @@
 from django.contrib.sitemaps import Sitemap, GenericSitemap
 
-from recordings.models import News, Program
-from agenda.models import Happening
+from antxetamedia.recordings.models import News, Program
+from antxetamedia.agenda.models import Happening
 
 
 news = {'queryset': News.objects.all(), 'date_field': 'pub_date'}

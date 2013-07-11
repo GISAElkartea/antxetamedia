@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 
-from multimedia.models import get_orphaned_media
+from antxetamedia.multimedia.models import get_orphaned_media
 
 
 class OrphanedMediaList(TemplateView):

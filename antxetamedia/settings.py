@@ -97,12 +97,12 @@ INSTALLED_APPS = (
     'south',
     'uni_form',
 
-    'multimedia',
-    'structure',
-    'recordings',
-    'agenda',
-    'programming',
-    'misc',
+    'antxetamedia.multimedia',
+    'antxetamedia.structure',
+    'antxetamedia.recordings',
+    'antxetamedia.agenda',
+    'antxetamedia.programming',
+    'antxetamedia.misc',
 )
 
 #PROGRAMMING
@@ -114,9 +114,12 @@ GRAPPELLI_ADMIN_URL = '/admin'
 GRAPPELLI_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
 
 #HAYSTACK
-HAYSTACK_SITECONF = 'search.conf'
-HAYSTACK_SEARCH_ENGINE = 'xapian'
-HAYSTACK_XAPIAN_PATH = join(DIR, 'xapian')
+HAYSTACK_CONNECTIONS = {
+        'default': {
+            'ENGINE': 'xapian_backend.XapianEngine',
+            'PATH': join(DIR, 'xapian'),
+            }
+        }
 HAYSTACK_DEFAULT_OPERATOR = 'AND'
 
 SSL_URLS = ()

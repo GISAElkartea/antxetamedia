@@ -1,4 +1,4 @@
-from misc.models import Feed, Banner, HEADLINE
+from antxetamedia.misc.models import Feed, Banner, HEADLINE
 
 def headlines(request):
     return {'headlines': Feed.objects.filter(where=HEADLINE)}

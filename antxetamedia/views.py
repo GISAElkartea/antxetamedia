@@ -1,10 +1,10 @@
 from django.views.generic import TemplateView
 
-from structure.models import Node
-from recordings.models import News, Program, INTERVIEW
-from multimedia.models import get_orphaned_media
-from agenda.models import Happening
-from misc.models import Widget, Feed, Link, PANEL
+from antxetamedia.structure.models import Node
+from antxetamedia.recordings.models import News, Program, INTERVIEW
+from antxetamedia.multimedia.models import get_orphaned_media
+from antxetamedia.agenda.models import Happening
+from antxetamedia.misc.models import Widget, Feed, Link, PANEL
 
 class FrontPageView(TemplateView):
     template_name = 'frontpage.html'

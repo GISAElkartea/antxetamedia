@@ -1,7 +1,7 @@
 from django.contrib.syndication.views import Feed
 from django.utils.translation import ugettext as _
 
-from agenda.models import Happening
+from antxetamedia.agenda.models import Happening
 
 
 class HappeningFeed(Feed):

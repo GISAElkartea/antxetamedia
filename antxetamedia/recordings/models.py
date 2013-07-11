@@ -9,8 +9,8 @@ from taggit.managers import TaggableManager
 from autoslug.fields import AutoSlugField
 from datetime import date
 
-from multimedia.models import Media, EmbededMedia
-from structure.models import Node
+from antxetamedia.multimedia.models import Media, EmbededMedia
+from antxetamedia.structure.models import Node
 
 INTERVIEW = 0
 FULL_PROGRAM = 1

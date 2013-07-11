@@ -7,7 +7,7 @@ from colorful.fields import RGBColorField
 from datetime import datetime, date, time, timedelta
 from math import ceil
 
-from structure.models import Node
+from antxetamedia.structure.models import Node
 
 weekdays = WEEKDAYS.items()
 

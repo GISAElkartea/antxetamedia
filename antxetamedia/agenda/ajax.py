@@ -5,7 +5,7 @@ from dajaxice.core import dajaxice_functions
 from datetime import date
 today = date.today()
 
-from agenda.models import Happening
+from antxetamedia.agenda.models import Happening
 
 
 def happenings_for_month(request, year=today.year, month=today.month):

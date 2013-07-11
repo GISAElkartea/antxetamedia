@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 
 from operator import itemgetter
 
-from programming.models import Space, Producer, Category
+from antxetamedia.programming.models import Space, Producer, Category
 
 weekdays = WEEKDAYS_ABBR
 

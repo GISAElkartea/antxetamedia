@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 
-from misc.views import AboutUsView
+from antxetamedia.misc.views import AboutUsView
 
 
 urlpatterns = patterns('',
