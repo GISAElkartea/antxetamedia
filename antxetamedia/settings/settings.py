@@ -17,10 +17,11 @@ ROOT_URLCONF = 'antxetamedia.urls'
 DAJAXICE_MEDIA_PREFIX = 'ajax'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = join(dirname(DIR), 'static')
+STATIC_ROOT = join(DIR, 'assets')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = join(dirname(DIR), 'media')
+MEDIA_ROOT = join(DIR, 'media')
 ADMIN_MEDIA_PREFIX = '/admin_media/'
+STATICFILES_DIRS = [join(DIR, 'static')]
 
 USE_X_FORWARDED_HOST = True
 TEMPLATE_DIRS = (join(DIR, 'templates'),)
