@@ -25,7 +25,7 @@
 {% endif %}
 
 {% for object in node_list %}
-<h3 class="node"><a href="{% url programs:node object.slug %}">{{ object }}</a></h3>
+<h3 class="node"><a href="{% url 'programs:node' object.slug %}">{{ object }}</a></h3>
 {% endfor %}
 
 

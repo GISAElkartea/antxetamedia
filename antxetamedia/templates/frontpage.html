@@ -64,7 +64,7 @@
 {% block content %}
 
 <div class="square" id="principal">
-    <h2><a href="{% url news:list %}">{% trans 'News' %}</a></h2>
+    <h2><a href="{% url 'news:list' %}">{% trans 'News' %}</a></h2>
     {% for object in news %}
 
     <div class="recording 
@@ -93,7 +93,7 @@
 
 
 <div class="square">
-    <h2><a href="{% url agenda:list %}">{% trans 'Agenda' %}</a></h2>
+    <h2><a href="{% url 'agenda:list' %}">{% trans 'Agenda' %}</a></h2>
     {% for object in happenings %}
 
     <div class="recording
@@ -123,7 +123,7 @@
 
 {% for node,programs in interviews.items %}
 <div class="square">
-    <h2><a href="{% url interviews:node node.slug %}">{{ node }}</a></h2>
+    <h2><a href="{% url 'interviews:node' node.slug %}">{{ node }}</a></h2>
     {% for object in programs %}
 
     <div class="recording
@@ -153,7 +153,7 @@
 
 
 <div class="square">
-    <h2><a href="{% url multimedia:view %}">{% trans 'Videos' %}</a></h2>
+    <h2><a href="{% url 'multimedia:view' %}">{% trans 'Videos' %}</a></h2>
     {% for media in orphaned_media %}
 
     <div class="recording

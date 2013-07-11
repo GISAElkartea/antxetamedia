@@ -44,7 +44,7 @@
             <p>
 
             {% if object.emission.program %}
-            <a href="{% url programs:node object.emission.program.slug %}"
+            <a href="{% url 'programs:node' object.emission.program.slug %}"
                 >{{ object.emission }}</a>
             {% else %}
             {% if object.emission.link %}

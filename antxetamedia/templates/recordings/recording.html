@@ -15,7 +15,7 @@
 
     {% if object.program %}
     <div class="section">
-        <a href="{% url programs:node object.program.slug %}">{{ object.program }}</a>
+        <a href="{% url 'programs:node' object.program.slug %}">{{ object.program }}</a>
     </div>
     {% endif %}
 

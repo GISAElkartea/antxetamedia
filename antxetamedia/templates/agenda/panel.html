@@ -53,7 +53,7 @@ $(function() {
 
 
 {% block feeds %}
-<a href="{% url agenda:feed %}"><img src="/media/css/img/feed.png"
+<a href="{% url 'agenda:feed' %}"><img src="/media/css/img/feed.png"
     alt="feeds" /></a>
 {% endblock feeds %}
 
@@ -64,10 +64,10 @@ $(function() {
 <h4>{% trans 'Towns' %}</h4>
 <ul>
     {% for object in towns %}
-    <li><a href="{% url agenda:town object.slug %}">{{ object }}</a></li>
+    <li><a href="{% url 'agenda:town' object.slug %}">{{ object }}</a></li>
     {% endfor %}
-    <li><a href="{% url agenda:other_town %}">{% trans 'Others' %}</a></li>
+    <li><a href="{% url 'agenda:other_town' %}">{% trans 'Others' %}</a></li>
 </ul>
 
-<h4><a href="{% url agenda:create %}">{% trans 'Sumbit your happening!' %}</a><h4>
+<h4><a href="{% url 'agenda:create' %}">{% trans 'Sumbit your happening!' %}</a><h4>
 {% endblock panel %}

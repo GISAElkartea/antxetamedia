@@ -8,7 +8,7 @@
 {% endblock css %}
 
 {% block feeds %}
-<a href="{% url programs:feed %}"><img src="/media/css/img/feed.png"
+<a href="{% url 'programs:feed' %}"><img src="/media/css/img/feed.png"
     alt="feeds" /></a>
 {% endblock feeds %}
 
@@ -19,7 +19,7 @@
 <h4>{% trans 'Programs' %}</h4>
 <ul>
     {% for object in children %}
-    <li><a href="{% url programs:node object.slug %}">{{ object }}</a></li>
+    <li><a href="{% url 'programs:node' object.slug %}">{{ object }}</a></li>
     {% endfor %}
 </ul>
 {% endif %}
@@ -33,17 +33,5 @@
     {% endfor %}
 </ul>
 {% endif %}
-
-{% comment %}
-{% get_tagcloud as tags for 'recordings.Program' %}
-{% if tags %}
-<div class="tagcloud">
-    {% for object in tags %}
-    <a class="tag-{{ object.weight|floatformat:0 }}"
-        href="{% url programs:tag object.slug %}">{{ object }}</a>
-    {% endfor %}
-</div>
-{% endif %}
-{% endcomment %}
 
 {% endblock panel %}

@@ -8,7 +8,7 @@
 {% endblock css %}
 
 {% block feeds %}
-<a href="{% url news:feed %}"><img src="/media/css/img/feed.png"
+<a href="{% url 'news:feed' %}"><img src="/media/css/img/feed.png"
     alt="feeds" /></a>
 {% endblock feeds %}
 
@@ -23,17 +23,5 @@
 </ul>
 {% endif %}
 
-
-{% comment %}
-{% get_tagcloud as tags for 'recordings.News' %}
-{% if tags %}
-<div class="tagcloud">
-    {% for object in tags %}
-    <a class="tag-{{ object.weight|floatformat:0 }}"
-        href="{% url news:tag object.slug %}">{{ object }}</a>
-    {% endfor %}
-</div>
-{% endif %}
-{% endcomment %}
 
 {% endblock panel %}
