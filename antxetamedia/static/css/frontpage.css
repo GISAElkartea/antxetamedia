@@ -1,0 +1,49 @@
+div.square iframe, div.square object, div.square embed { max-width: 14em; max-height: 12em; }
+div.square div.date { font-size: .6em; font-weight: bold; }
+
+div.square {
+    width: 39%;
+    float: left;
+    padding: 0;
+    margin-bottom: 2em;
+    cursor: w-resize;
+}
+div.square#principal {
+    width: 56%;
+    margin: 0 1em 1em 0;
+    padding: 0 .5em 0 0;
+    cursor: auto;
+    border-right: gray solid 0.15em;
+    background: #e8e8e8;
+}
+    div.square .hidden { display: none; }
+    div.square#principal .hidden { display: block; }
+
+    div.square#principal h2 { font-size: 1.2em; }
+    div.square h2 {
+        display: inline-block;
+        margin: 0 0 .5em 0;
+        padding: 0 .4em 0 .2em;
+        color: black;
+        background: #E8E8E8;
+        border-color: #2F3841;
+        border-style: solid;
+        border-width: .1em .1em .1em 1.2em;
+        font-size: .9em;
+    }
+    div.square > hr { clear: both; color: white; }
+
+    #principal div.recording > img { float: none; width: 100%; }
+    div.recording > img { float: left; width: 40%; margin: 0 .5em 0 0; }
+
+    #principal div.recording > h4 { font-size: 1em; }
+    div.recording > h4 { margin: 0 0 .5em 0; font-size: .8em; }
+
+    div.recording, hr { margin-left: .8em; }
+
+    div.recording div.body { padding: .2em 0 .2em 0; }
+    #principal div.recording.first div.body { 
+        background: #1b1f25; color: #bac7d4; }
+
+    div.recording p { margin: 0; font-size: .8em; }
+    div.recording a.play img { margin: 0; }

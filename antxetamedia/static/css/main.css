@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    width: 99.9%;
+    background: #dbdbdb;
+    font-family: Verdana;
+}
+
+a { color: #37538c; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+div.play { float: left; }
+a.play img, a.download img { 
+    float: left;
+    margin: .5em .2em 0 0; 
+    width: 2em; 
+}
+
+img { border: 0; }
+input, textarea { background: #dcdcdc; border: .1em solid black; }
+
+ul.errorlist, { 
+    color: red; 
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    list-style: none;
+}
+
+div#wrap {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 2% 0 2%;
+    padding-bottom: 2%;
+    background: #efefef;
+}
+
+div#headlines { 
+    width: 99%;
+    height: 1em;
+    margin: 0;
+    padding: .4em;
+    font-size: .9em;
+    background: #cdcdcd;
+}
+
+div#header {
+    background: #dbdbdb;
+}
+    div#header h1 { margin: 0; }
+    div#header img#banner { width: 100%; }
+    div#header img#logo { 
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        width: 12em;
+    }
+    div#header #font a { color: #a3aeba; }
+    div#header #font {
+        position: absolute;
+        top: 7em;
+        right: 5%;
+        padding: .3em;       
+        font-weight: bold;
+        background: #2f3841;
+        -moz-border-radius: .3em;
+        border: .1em solid #a3aeba;
+    }
+
+
+
+div#menu {
+    margin-top: -.7em;
+    width: 100%;
+    background: #2f3841;
+    border-bottom: .5em solid #dbdbdb;
+    font-size: .7em;
+}
+    #menu form input { width: 9em; font-size: .8em; text-align: center; }
+    #menu form { float: right; margin: .2em 1.7em .2em .2em; }
+    #menu a:hover { text-decoration: none; color: #868f99; }
+    #menu a { 
+        display: block; 
+        padding: .3em .4em .3em .4em; 
+        color: #a3aeba; 
+        font-weight: bold; 
+    }
+    #menu ul { 
+        margin: 0;
+        padding: 0;
+        display: none; 
+        background: #2f3841;
+        border-width: .1em 0 .1em .1em;
+        border-style: solid;
+        border-color: #4f5861;
+    }
+    #menu li:hover { background: #1e2329; }
+    #menu li { 
+        float: left; 
+        display: block; 
+        text-align: center;
+        border-right: .1em solid #4f5861;
+    }
+
+    #menu > ul { 
+        display: inline-block; 
+        border: none; 
+    }
+
+    #menu ul > li:hover > ul { display: block; }
+    #menu ul > li ul.two  { 
+        position: absolute;
+        left: 2%;
+        width: 96%;
+    }
+
+    #menu ul > li > ul > li:hover > ul { 
+        display: block; 
+        position: absolute; 
+    }
+    #menu ul > li > ul > li > ul > li { 
+        float: none;
+        border-width: 0 .1em .1em 0; 
+        border-style: solid;
+        border-color: #4f5861;
+    }
+
+    #menu ul > li > ul > li > ul > li:hover > ul { 
+        display: inline; 
+        position: absolute; 
+    }
+
+
+
+div#feeds {
+    position: absolute;
+    right: 3%;
+}
+    div#feeds img { width: 2.5em; }
+
+
+
+div#panel {
+    float: right;
+    width: 23%;
+    margin: 2%;
+    padding: 0.5em;
+    clear: both;
+    font-size: .9em;
+    background: #a3aeba;
+}
+    #panel > #listen { text-align: center; }
+    #panel > #listen img { width: 100%; }
+    #panel img { width: 100%; }
+
+    #panel a { color: #313b64; }
+    #panel h3, #panel h4, #panel h5 { 
+        margin: 0; 
+        color: #2F3841; 
+    } 
+
+    #panel ul { margin: 0 0 0 .5em; padding: 0; }
+    #panel li {
+        margin: 0 0 .7em .5em; 
+        padding: 0; 
+        color: #2f3841;
+        list-style: none;
+    }
+    
+
+#content {  
+    margin: 2%;
+    overflow: hidden;
+}
+    #content #reason { border: 0.1em solid #A3AEBA; margin-bottom: 1em; overflow: auto; }
+        #content #reason h2 {
+            margin: 0;
+            text-transform: uppercase;
+            color: #2f3841;
+            background: #cfcfcf;
+            border-bottom: .05em solid #A3AEBA;
+            text-align: center;
+        }
+        #content #reason img { margin: 1em; width: 5em; float: left;}
+        #content #reason p.link { text-align: center; }
+        #content #reason p {
+            margin: 0;
+            padding: 1em;
+            background: #E8E8E8;
+            text-align: justify;
+        }
+
+    div#pagination { text-align: center; }
+    div#pagination #numbers a { color: #2f3841; font-weight: bold; }
+    div#pagination #numbers {
+        margin: 0 1em 0 1em;
+        border: 0.1em solid #A3AEBA;
+        background: #cfcfcf;
+        color: #2f3841;
+    }
+
+#footer {
+    width: 80%;
+    margin: 0 auto 2em auto;
+    padding: .5em;
+    text-align: center;
+    font-size: .7em;
+    background: #8197b4;
+}
+    #footer img { max-height: 5em; }
+
+#container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+    #container #object #player { width: 100%; height: 100%; }
+    #container #object a.close { 
+        display: none; 
+        float: right;
+        opacity: clear;
+    }
+    #container #object {
+        width: 100%;
+        height: 25px;
+    }
+
+    #container.video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: .7;
+    }
+    #container.video #object a.close { display: block; }
+    #container.video #object a.close img { width: 1em; }
+    #container.video #object {
+        width: 50%;
+        height: 50%;
+        margin: 10% auto;
+    }
+
+div.ui-datepicker { font-size: .8em; }
+.ui-datepicker .ui-datepicker-header { 
+    border: .1em solid #b3beca; 
+    background: #a3aeba; }
+.ui-datepicker td.fill a { color: #2f3841; background: #a3aeba; }
+.ui-datepicker td a { border: .1em solid #CCCCCC; } 
+.ui-datepicker td.ui-datepicker-today a { 
+    border: .1em solid #CCCCCC;
+    color: #2f3841; 
+    background: #dbdbdb; }
+.ui-datepicker td.ui-datepicker-current-day a { border: .1em solid black; }
+

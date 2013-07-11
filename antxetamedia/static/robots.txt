@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /kudeaketa
+Disallow: /stats
+Disallow: /bilatu

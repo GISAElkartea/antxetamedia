@@ -1,0 +1,12 @@
+div.video { 
+    float: left;
+    margin: .5em 1em 1em 0;
+}
+    div.video > iframe, div.video > embed, div.video > object > embed {
+        max-width: 16em;
+        max-height: 14em;
+    }
+    div.player object {
+        width: 16em;
+        height: 14em;
+    }

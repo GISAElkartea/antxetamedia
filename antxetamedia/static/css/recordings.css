@@ -1,0 +1,48 @@
+.recording { margin: 0 0 2em 0; clear: both; }
+    .recording .date { font-size: .6em; font-weight: bold; }
+    .recording .section {
+        float: right;
+        border: .1em solid #a6cc91;
+        padding: .3em;
+        -moz-border-radius: .7em;
+    }
+    .recording  h3 { margin: 0 0 .5em 0; font-size: 1.2em; color: #2f3841; }
+    .recording > img { 
+        float: left; 
+        width: 10em; 
+        margin: .5em 1em 1em 0; 
+    }
+
+    .recording .play  h6 { width: 6em; clear: left; overflow: auto; margin: 0; }
+    .recording p { text-align: justify; font-size: .8em; }
+
+    .recording .more { 
+        min-height: 1em;
+        clear: left; 
+        text-align: center; 
+        background: #dbdbdb;
+        -moz-border-radius: .5em;
+    }
+
+.node {
+    margin: 0 1em 1em 0;
+    float: left;
+    padding: .5em;
+    background: #cfcfcf;
+    border: 0.1em solid #A3AEBA; 
+    text-align: center;
+}
+
+.tagcloud {
+    margin: .5em;
+    overflow: auto;
+    border-top: .1em dashed #2F3841;
+    border-bottom: .1em dashed #2F3841; 
+}
+    .tagcloud a { margin: 1px; float: left; }
+    .tagcloud .tag-6 { font-size: 2em; }
+    .tagcloud .tag-5 { font-size: 1.8em; }
+    .tagcloud .tag-4 { font-size: 1.3em; }
+    .tagcloud .tag-3 { font-size: 1em; }
+    .tagcloud .tag-2 { font-size: .6em; }
+    .tagcloud .tag-1 { font-size: .5em; }

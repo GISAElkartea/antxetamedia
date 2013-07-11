@@ -1,0 +1,72 @@
+div.happening {
+    overflow: auto;
+    margin-bottom: 1em;
+    border: #A3AEBA solid .1em;
+    padding: .3em;
+    -moz-border-radius: .4em;
+}
+
+div.happening div.header { 
+    overflow: auto;
+    margin-bottom: 1em; 
+    padding: .3em;
+    background: #2F3841;
+    width: 90%;
+    -moz-border-radius: .4em;
+}
+div.happening div.header h3 { margin: 0; color:  #a3aeba; }
+div.happening div.header h3 a { color:  #a3aeba; }
+div.happening div.header div.place { 
+    float: right; 
+    max-width: 40%;
+    margin: .2em; 
+    padding: .2em;
+    background: #a3aeba;
+    -moz-border-radius: .4em;
+}
+
+div.happening div.date { 
+    float: right; 
+    border: .1em solid gray;
+    font-size: .9em;
+    background: #A3AEBA;
+    text-align: center;
+    -moz-border-radius: .4em;
+}
+    div.date div { padding: .1em; }
+    div.date div.day { font-size: 1.5em; }
+    div.date div.time { font-size: .8em; }
+    div.date div.month { 
+        color: #a3aeba; 
+        background: #2F3841; 
+        font-weight: bold; 
+    }
+
+div.happening > img { 
+    float: left; 
+    max-width: 10em; 
+    margin: 0 .3em .3em 0;
+}
+
+div.happening div.more {
+    clear: left;
+    margin: 0;
+    padding: .2em;
+    background: #dbdbdb;
+    text-align: center;
+    font-size: .9em;
+    -moz-border-radius: .4em;
+}
+
+form.uniForm fieldset { margin-bottom: .7em; }
+form.uniForm .ctrlHolder { padding: 0; }
+form.uniForm .ctrlHolder.error p { margin: 0; color: red; font-weight: bold; }
+form.uniForm .ctrlHolder#div_id_other_town label { display: none; }
+form.uniForm .ctrlHolder#div_id_other_town input { margin-left: 34%; }
+form.uniForm legend { 
+    margin-bottom: .7em;
+    padding: .2em 100% .2em .2em;
+    background: #A3AEBA; 
+}
+
+#agenda div.ui-datepicker { width: 99%; margin: .5em 0 .5em 0; }

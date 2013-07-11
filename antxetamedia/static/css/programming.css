@@ -1,0 +1,40 @@
+table#programming {
+    width: 100%;
+    border-spacing: 0;
+    background: #a3aeba;
+}
+    table#programming th {
+        background: #2f3841;
+        color: #dbdbdb;
+    }
+    table#programming th.hour {
+        margin: 0;
+        width: 10%;
+        height: 3em;
+        background: none;
+        color: black;
+        font-size: .8em;
+        text-align: center;
+    }
+    table#programming td {
+        border-style: solid;
+        border-width: 0;
+        border-color: transparent;
+        font-size: .8em;
+        background: gray;
+        text-align: center;
+    }
+    table#programming td p a { color: black; font-weight: bold; }
+    table#programming td p { display: inline; font-size: .7em; }
+
+    .tooltip {
+        display: none;
+        padding: .5em;
+        text-align: center;
+        color: black;
+        background: #b9c6d3;
+        font-size: .8em;
+        border: #2f3841 solid .1em;
+    }
+
+.color { display: inline-block; width: 2em; border: .1em solid black; }
