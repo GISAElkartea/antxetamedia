@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
-{% load i18n %}
+{% load i18n static %}
 
 
 {% block css %}
-<link href="/media/css/frontpage.css" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/frontpage.css' %}" rel="stylesheet" type="text/css" />
 {% endblock css %}
 
 
 {% block js %}
-<script src="/media/js/squares.js" type="text/javascript" charset="utf-8">
+<script src="{% static 'js/squares.js' %}" type="text/javascript" charset="utf-8">
 </script>
 <script type="text/javascript" charset="utf-8">
     $(function() {
@@ -81,7 +81,7 @@
         <div class="body">
             {% for object in object.medias.all %}
             <a class="play" href="{{ object.get_url }}"><img 
-                alt="{% trans 'Play' %}" src="/media/css/img/play.png" /></a>
+                alt="{% trans 'Play' %}" src="{% static 'css/img/play.png' %}" /></a>
             {% endfor %}
 
             {{ object.text|truncatewords_html:'20' }}
@@ -110,7 +110,7 @@
         <div class="body">
             {% for object in object.medias.all %}
             <a class="play" href="{{ object.get_url }}"><img 
-                alt="{% trans 'Play' %}" src="/media/css/img/play.png" /></a>
+                alt="{% trans 'Play' %}" src="{% static 'css/img/play.png' %}" /></a>
             {% endfor %}
 
             {{ object.description|truncatewords_html:'20' }}
@@ -140,7 +140,7 @@
         <div class="body">
             {% for object in object.medias.all %}
             <a class="play" href="{{ object.get_url }}"><img 
-                alt="{% trans 'Play' %}" src="/media/css/img/play.png" /></a>
+                alt="{% trans 'Play' %}" src="{% static 'css/img/play.png' %}" /></a>
             {% endfor %}
 
             {{ object.text|truncatewords_html:'20' }}

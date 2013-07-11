@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n static %}
 
 <div class="recording">
     <div class="date">{{ object.pub_date }}</div>
@@ -34,9 +34,9 @@
         {% for object in object.medias.select_related %}
         <div>
             <a class="play" href="{{ object.get_url }}"><img 
-                src="/media/css/img/play.png" alt="{% trans 'Play' %}" /></a>
+                src="{% static 'css/img/play.png' %}" alt="{% trans 'Play' %}" /></a>
             <a class="download" href="{{ object.get_url }}"><img
-                src="/media/css/img/download.png" alt="{% trans 'Download' %}" /></a>
+                src="{% static 'css/img/download.png' %}" alt="{% trans 'Download' %}" /></a>
             {% if object.title and quantity > 1 %}
             <h6>{{ object.title }}</h6>
             {% endif %}

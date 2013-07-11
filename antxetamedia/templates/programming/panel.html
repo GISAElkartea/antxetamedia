@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
-{% load i18n %}
+{% load i18n static %}
 
 
 {% block title %}{% trans 'Programming' %} | {% endblock title %}
 
 
 {% block css %}
-<link href="/media/css/programming.css" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/programming.css' %}" rel="stylesheet" type="text/css" />
 {% endblock css %}
 
 
 {% block js %}
-<script src="/media/js/jquery.tooltip.js"
+<script src="{% static 'js/jquery.tooltip.js' %}"
     type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
     $(function() {

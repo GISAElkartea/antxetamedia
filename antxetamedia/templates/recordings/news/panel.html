@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
-{% load i18n %}
+{% load i18n static %}
 
 
 {% block css %}
-<link href="/media/css/recordings.css" rel="stylesheet" type="text/css" />
-<link href="/media/css/multimedia.css" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/recordings.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/multimedia.css' %}" rel="stylesheet" type="text/css" />
 {% endblock css %}
 
 {% block feeds %}
-<a href="{% url 'news:feed' %}"><img src="/media/css/img/feed.png"
+<a href="{% url 'news:feed' %}"><img src="{% static 'css/img/feed.png' %}"
     alt="feeds" /></a>
 {% endblock feeds %}
 

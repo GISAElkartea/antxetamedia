@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load i18n uni_form_tags %}
+{% load i18n uni_form_tags static %}
 
 
 {% block title %}
@@ -8,18 +8,18 @@
 
 
 {% block css %}
-<link href="/media/css/recordings.css" rel="stylesheet" type="text/css" />
-<link href="/media/css/agenda.css" rel="stylesheet" type="text/css" />
-<link href="/media/css/search.css" rel="stylesheet" type="text/css" />
-<link href="/media/js/jquery.datepicker/datepicker.css" 
+<link href="{% static 'css/recordings.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/agenda.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/search.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'js/jquery.datepicker/datepicker.css' %}" 
     rel="stylesheet" type="text/css" />
 {% endblock css %}
 
 
 {% block js %}
-<script src="/media/js/jquery.datepicker/datepicker.js" type="text/javascript"
+<script src="{% static 'js/jquery.datepicker/datepicker.js' %}" type="text/javascript"
     encoding="utf-8"></script>
-<script src="/media/js/jquery.datepicker/datepicker.eu.js" type="text/javascript"
+<script src="{% static 'js/jquery.datepicker/datepicker.eu.js' %}" type="text/javascript"
     encoding="utf-8"></script>
 <script type="text/javascript" encoding="utf-8">
     $(function() {

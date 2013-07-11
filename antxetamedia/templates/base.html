@@ -1,17 +1,17 @@
-{% load i18n %}
+{% load i18n static %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}{% endblock title %}AntxetaMedia.info</title>
-        <link href="/media/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <script src="/media/js/jquery.js" type="text/javascript" 
+        <script src="{% static 'js/jquery.js' %}" type="text/javascript" 
             charset="utf-8"></script>
-        <script src="/media/flowplayer/flowplayer.js"
+        <script src="{% static 'flowplayer/flowplayer.js' %}"
             type="text/javascript" charset="utf-8"></script>
-        <script src="/media/js/font.js" type="text/javascript" 
+            <script src="{% static 'js/font.js' %}" type="text/javascript" 
             charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
         $(function() {
@@ -71,7 +71,7 @@
                         alt="{{ banner.name }}"/>
 
                     {% if banner.with_logo %}
-                    <img id="logo" src="/media/css/img/logo.png"
+                    <img id="logo" src="{% static 'css/img/logo.png' %}"
                             alt="AntxetaMedia">
                     {% endif %}
                 </a></h1>
@@ -95,8 +95,8 @@
 
             <div id="panel">
                 <div id="listen">
-                    <a href="/media/antxetairratia.m3u"><img 
-                        src="/media/css/img/listen.png" 
+                    <a href="{% static 'antxetairratia.m3u' %}"><img 
+                        src="{% static 'css/img/listen.png' %}" 
                         alt="{% trans 'Listen live!' %}"/></a>
                 </div>
 
@@ -112,14 +112,14 @@
         </div>
 
         <div id="footer">
-            <a href="/"><img src="/media/css/img/pausu.png" 
+            <a href="/"><img src="{% static 'css/img/pausu.png' %}" 
                 alt="PAUSUMEDIA"/></a>
-            <a href="/"><img src="/media/css/img/antxeta.png" 
+            <a href="/"><img src="{% static 'css/img/antxeta.png' %}" 
                 alt="ANTXETA IRRATIA"/></a>
             <a href="http://euskalirratiak.info/"><img 
-                src="/media/css/img/euskalirratiak.png"
+                src="{% static 'css/img/euskalirratiak.png' %}"
                 alt="EUSKAL IRRATIAK" /></a>
-            <img src="/media/css/img/jaurlaritza.png"
+            <img src="{% static 'css/img/jaurlaritza.png' %}"
                 alt="EUSKO JAURLARITZA" />
             <p><a href="/admin/">Kudeatu</a>
                 | <a href="/stats/">Estadistikak</a></p>
@@ -140,19 +140,20 @@
         <div id="container">
             <div id="object">
                 <a href="#" class="close"><img 
-                    src="/media/css/img/close.png" alt="close" /></a>
+                    src="{% static 'css/img/close.png' %}" alt="close" /></a>
+
                 <div id="player" ></div>
             </div>
         </div>
 
         <script type="text/javascript" charset="utf-8">
-            $f('player', '/media/flowplayer/flowplayer.swf',
+            $f('player', '{% static 'flowplayer/flowplayer.swf' %}',
                 {
                     clip: {
                         autoplay: false,
                     },
                     plugins: {
-                        audio: {url: '/media/flowplayer/flowplayer.audio.swf'},
+                        audio: {url: '{% static 'flowplayer/flowplayer.audio.swf' %}'},
                         controls: {
                             fullscreen: false, 
                             height: 25, 
@@ -174,8 +175,8 @@
                 var type = player.getClip().type
                 $('#container').attr('class', type)
 
-                $('a.play > img').attr('src', '/media/css/img/play.png')
-                $(this).children('img').attr('src', '/media/css/img/playing.gif')
+                $('a.play > img').attr('src', '{% static 'css/img/play.png' %}')
+                $(this).children('img').attr('src', '{% static 'css/img/playing.gif' %}')
             });
 
             $('#container a.close').click(function(event) {
