@@ -62,16 +62,16 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'middleware.SetRemoteAddrFromForwardedFor',
 )
+USE_X_FORWARDED_HOST = True
 TEMPLATE_DIRS = (join(DIR, 'templates'),)
 TEMPLATE_CONTEXT_PROCESSORS = SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
         'django.core.context_processors.request',
-        'structure.context_processors.nodes_on_menu',
-        'structure.context_processors.root_nodes',
-        'recordings.context_processors.news_categories',
-        'misc.context_processors.headlines',
-        'misc.context_processors.banner',
+        'antxetamedia.structure.context_processors.nodes_on_menu',
+        'antxetamedia.structure.context_processors.root_nodes',
+        'antxetamedia.recordings.context_processors.news_categories',
+        'antxetamedia.misc.context_processors.headlines',
+        'antxetamedia.misc.context_processors.banner',
         )
 
 
@@ -111,7 +111,7 @@ PROGRAMMING_SPACE = 30
 #GRAPPELLI
 GRAPPELLI_ADMIN_TITLE = 'AntxetaMedia.info'
 GRAPPELLI_ADMIN_URL = '/admin'
-GRAPPELLI_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
+GRAPPELLI_INDEX_DASHBOARD = 'antxetamedia.dashboard.CustomIndexDashboard'
 
 #HAYSTACK
 HAYSTACK_CONNECTIONS = {
