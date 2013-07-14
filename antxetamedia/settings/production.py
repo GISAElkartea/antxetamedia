@@ -33,7 +33,9 @@ DATABASES = {
         }
 
 MEDIA_ROOT = env['MEDIA_ROOT']
+MEDIA_URL = '/static/media/'
 STATIC_ROOT = env['STATIC_ROOT']
+STATIC_URL = '/static/static/'
 SSL_URLS = (r'/admin/',)
 
 
