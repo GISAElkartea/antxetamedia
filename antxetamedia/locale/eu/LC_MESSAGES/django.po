@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-29 01:11+0100\n"
+"POT-Creation-Date: 2013-07-14 20:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,19 +44,19 @@ msgstr "Programazioa"
 msgid "Others"
 msgstr "Bestelakoak"
 
-#: dashboard.py:95
+#: dashboard.py:96
 msgid "Administrator"
 msgstr "Kudeatzailea"
 
-#: dashboard.py:107
+#: dashboard.py:108
 msgid "Latest Actions"
 msgstr "Azkeneko ekintzak"
 
-#: dashboard.py:113 templates/agenda/happening.html:43
+#: dashboard.py:114 templates/agenda/happening.html:43
 msgid "Contact"
 msgstr "Kontaktua"
 
-#: dashboard.py:122
+#: dashboard.py:123
 msgid "Help"
 msgstr "Laguntza"
 
@@ -87,7 +87,7 @@ msgstr "herriak"
 
 #: agenda/models.py:14 agenda/models.py:36 misc/models.py:23 misc/models.py:92
 #: multimedia/models.py:46 programming/models.py:18 programming/models.py:42
-#: recordings/models.py:24 structure/models.py:22
+#: projects/models.py:13 recordings/models.py:24 structure/models.py:22
 msgid "name"
 msgstr "izena"
 
@@ -123,8 +123,8 @@ msgstr "bestelakoa"
 msgid "place"
 msgstr "tokia"
 
-#: agenda/models.py:48 misc/models.py:93 recordings/models.py:50
-#: structure/models.py:29
+#: agenda/models.py:48 misc/models.py:93 projects/models.py:14
+#: recordings/models.py:50 structure/models.py:29
 msgid "image"
 msgstr "irudia"
 
@@ -166,7 +166,8 @@ msgstr "widgeta"
 msgid "widgets"
 msgstr "widgetak"
 
-#: misc/models.py:36 misc/models.py:118 recordings/models.py:43
+#: misc/models.py:36 misc/models.py:118 projects/models.py:15
+#: recordings/models.py:43
 msgid "text"
 msgstr "testua"
 
@@ -355,6 +356,14 @@ msgstr "hasiera"
 msgid "ending"
 msgstr "bukaera"
 
+#: projects/models.py:10
+msgid "project"
+msgstr ""
+
+#: projects/models.py:11
+msgid "projects"
+msgstr ""
+
 #: recordings/models.py:21
 msgid "news category"
 msgstr "berrien kategoria"
@@ -488,14 +497,18 @@ msgid "There is no content"
 msgstr "Ez dago edukirik"
 
 #: templates/base.html:129
-msgid "Programming by"
-msgstr "Programazioa"
+msgid ""
+"\n"
+"                Brought to you by <a href=\"http://gisa-elkartea.org/\">GISA "
+"Elkartea</a>\n"
+"                "
+msgstr ""
+"\n"
+"                <a href=\"http://gisa-elkartea.org/\">GISA Elkartea</a>"
+"ren eskutik\n"
+"                "
 
-#: templates/base.html:131
-msgid "Graphic design by"
-msgstr "Diseinu grafikoa"
-
-#: templates/base.html:134
+#: templates/base.html:135
 msgid "Source code"
 msgstr "Iturburu kodea"
 
@@ -583,6 +596,12 @@ msgstr "Azkenekoak"
 #: templates/search/search_list.html:14
 msgid "There are no results :-/"
 msgstr "Ez dago emantzarik :-/"
+
+#~ msgid "Programming by"
+#~ msgstr "Programazioa"
+
+#~ msgid "Graphic design by"
+#~ msgstr "Diseinu grafikoa"
 
 #~ msgid "blip media"
 #~ msgstr "blip-eko media"
