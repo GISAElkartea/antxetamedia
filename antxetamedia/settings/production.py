@@ -2,7 +2,8 @@
 import json
 from antxetamedia.settings.settings import *
 
-env = json.loads('env.json')
+with open('env.json') as e:
+    env = json.load(e)
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
