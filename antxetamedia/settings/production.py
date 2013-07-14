@@ -36,7 +36,7 @@ SSL_URLS = (r'/admin/',)
 
 
 ADMINS = (
-        ('Unai Zalakain', '{}@{}.{}'.format('contact', 'unaizalakain', 'info'),
+        ('Unai Zalakain', '{}@{}.{}'.format('contact', 'unaizalakain', 'info')),
 )
 MANAGERS = ADMINS
 
