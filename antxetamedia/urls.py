@@ -24,6 +24,8 @@ urlpatterns = patterns('',
         (r'^search/', include('antxetamedia.search.urls', namespace='search')),
         (r'^multimedia/', include('antxetamedia.multimedia.urls', namespace='multimedia')),
         (r'^recordings/', include('antxetamedia.recordings.urls')),
+        url(r'^projects/', include('antxetamedia.projects.urls', namespace='projects')),
+        url(r'^markitup/', include('markitup.urls')),
         (r'^', include('antxetamedia.misc.urls', namespace='misc')),
 
         (r'^admin/grappelli/', include('grappelli.urls')),

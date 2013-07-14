@@ -57,6 +57,7 @@ INSTALLED_APPS = (
     'haystack',
     'south',
     'uni_form',
+    'markitup',
 
     'antxetamedia.multimedia',
     'antxetamedia.structure',
@@ -64,6 +65,7 @@ INSTALLED_APPS = (
     'antxetamedia.agenda',
     'antxetamedia.programming',
     'antxetamedia.misc',
+    'antxetamedia.projects',
 )
 
 LOGGING = {
@@ -116,3 +118,10 @@ S3_METADATA = {
         'x-archive-meta-mediatype': 'audio',
         'x-archive-meta-collection': 'opensource_audio',
         }
+
+MARKITUP_FILTER = ('markdown.markdown', {})
+MARKITUP_SET = 'markitup/sets/markdown'
+MARKITUP_SKIN = 'markitup/skins/markitup'
+MARKITUP_AUTO_PREVIEW = True
+
+JQUERY_URL = 'js/jquery.js'

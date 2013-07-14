@@ -82,6 +82,7 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             css_classes=('collapse closed',),
             models=(
+                'antxetamedia.projects.models.Project',
                 'antxetamedia.misc.models.Feed',
                 'antxetamedia.misc.models.Widget',
                 'antxetamedia.misc.models.Link', 
