@@ -2,7 +2,7 @@
 import json
 from antxetamedia.settings.settings import *
 
-with open('env.json') as e:
+with open('/home/unaizalakain/webapps/antxeta_django/env.json') as e:
     env = json.load(e)
 
 DEBUG = False
