@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns, include, url
 
 from antxetamedia.recordings.interviews.feeds import InterviewFeed
 from antxetamedia.recordings.interviews.views import NodeInterviewList, TagInterviewList,\

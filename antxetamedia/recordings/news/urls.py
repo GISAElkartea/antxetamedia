@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns, include, url
 
 from antxetamedia.recordings.news.feeds import NewsFeed
 from antxetamedia.recordings.news.views import NewsList, CategoryNewsList, TagNewsList,\
