@@ -26,9 +26,9 @@ class CustomIndexDashboard(Dashboard):
             column=1,
             collapsible=True,
             models=(
-                'recordings.models.News', 
-                'recordings.models.NewsCategory',
-                'recordings.models.Program',
+                'antxetamedia.recordings.models.News', 
+                'antxetamedia.recordings.models.NewsCategory',
+                'antxetamedia.recordings.models.Program',
                 ),
         ))
 
@@ -38,9 +38,9 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             css_classes=('collapse closed',),
             models=(
-                'multimedia.models.EmbededMedia',
-                'multimedia.models.Media',
-                'multimedia.models.Account',)
+                'antxetamedia.multimedia.models.EmbededMedia',
+                'antxetamedia.multimedia.models.Media',
+                'antxetamedia.multimedia.models.Account',)
             ))
 
         self.children.append(modules.ModelList(
@@ -49,8 +49,8 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             css_classes=('collapse closed',),
             models=(
-                'agenda.models.Happening', 
-                'agenda.models.Town',
+                'antxetamedia.agenda.models.Happening', 
+                'antxetamedia.agenda.models.Town',
                 ),
             ))
 
@@ -60,7 +60,7 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             css_classes=('collapse closed',),
             models=(
-                'structure.models.Node',
+                'antxetamedia.structure.models.Node',
                 ),
             ))
 
@@ -70,9 +70,9 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             css_classes=('collapse closed',),
             models=(
-                'programming.models.Emission',
-                'programming.models.Producer',
-                'programming.models.Category',
+                'antxetamedia.programming.models.Emission',
+                'antxetamedia.programming.models.Producer',
+                'antxetamedia.programming.models.Category',
                 ),
             ))
 
@@ -82,11 +82,11 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             css_classes=('collapse closed',),
             models=(
-                'misc.models.Feed',
-                'misc.models.Widget',
-                'misc.models.Link', 
-                'misc.models.Banner',
-                'misc.models.AboutUs',
+                'antxetamedia.misc.models.Feed',
+                'antxetamedia.misc.models.Widget',
+                'antxetamedia.misc.models.Link', 
+                'antxetamedia.misc.models.Banner',
+                'antxetamedia.misc.models.AboutUs',
                 ),
         ))
 
@@ -113,8 +113,8 @@ class CustomIndexDashboard(Dashboard):
             title=_('Contact'),
             column=3,
             children=(
-                ['Unai Zalakain', 'http://www.unaizalakain.info/contact/', True],
-                ['Iune Trecet', 'mailto:iunetrecet@gmail.com', True],
+                ['Unai Zalakain', 'mailto:unai@gisa-elkartea.org', True],
+                ['Iune Trecet', 'mailto:iunetrecet@gisa-elkartea.org', True],
             )
         ))
 
