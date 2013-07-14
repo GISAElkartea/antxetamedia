@@ -18,7 +18,7 @@ MIDDLEWARE_CLASSES = ('django.middleware.cache.UpdateCacheMiddleware',
                     MIDDLEWARE_CLASSES + \
                     ('django.middleware.http.ConditionalGetMiddleware',
                     'django.middleware.cache.FetchFromCacheMiddleware',
-                    'middleware.SSLRedirect',)
+                    'antxetamedia.middleware.SSLRedirect',)
 
 DATABASES = {
         'default': {
@@ -37,7 +37,7 @@ SSL_URLS = (r'/admin/',)
 
 
 ADMINS = (
-        ('Unai Zalakain', '{}@{}.{}'.format('contact', 'unaizalakain', 'info')),
+        ('Unai Zalakain', '{0}@{1}.{2}'.format('contact', 'unaizalakain', 'info')),
 )
 MANAGERS = ADMINS
 
