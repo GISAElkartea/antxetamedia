@@ -8,6 +8,7 @@ TIME_ZONE = 'Europe/Paris'
 LANGUAGE_CODE = 'eu'
 FIRST_DAY_OF_WEEK = 1
 USE_I18N = True
+LOCALE_PATHS = [join(DIR, 'locale')]
 USE_L10N = False
 USE_TZ = True
 DATE_INPUT_FORMATS = SETTINGS.DATE_INPUT_FORMATS + ('%Y/%m/%d',)
@@ -25,10 +26,18 @@ ADMIN_MEDIA_PREFIX = '/admin_media/'
 STATICFILES_DIRS = [join(DIR, 'static')]
 
 USE_X_FORWARDED_HOST = True
-MIDDLEWARE_CLASSES = SETTINGS.MIDDLEWARE_CLASSES
+MIDDLEWARE_CLASSES = (
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.locale.LocaleMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+)
 
 TEMPLATE_DIRS = (join(DIR, 'templates'),)
 TEMPLATE_CONTEXT_PROCESSORS = SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
+        'django.core.context_processors.i18n',
         'django.core.context_processors.request',
         'antxetamedia.structure.context_processors.nodes_on_menu',
         'antxetamedia.structure.context_processors.root_nodes',
