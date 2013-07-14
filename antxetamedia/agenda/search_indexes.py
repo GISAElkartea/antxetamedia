@@ -1,22 +1,22 @@
-from haystack.indexes import *
-from haystack import site
+from haystack import indexes
 
 from antxetamedia.agenda.models import Happening
 
 
-class HappeningIndex(SearchIndex):
-    text = CharField(document=True, use_template=True)
+class HappeningIndex(indexes.SearchIndex, indexes.Indexable):
+    text = indexable.CharField(document=True, use_template=True)
 
-    name = CharField(model_attr='name')
-    organizer = CharField(model_attr='organizer')
-    description = CharField(model_attr='description')
-    date = DateField(model_attr='date')
-    town = CharField()
-    place = CharField(model_attr='place')
+    name = indexable.CharField(model_attr='name')
+    organizer = indexable.CharField(model_attr='organizer')
+    description = indexable.CharField(model_attr='description')
+    date = indexable.DateField(model_attr='date')
+    town = indexable.CharField()
+    place = indexable.CharField(model_attr='place')
 
     def prepare_town(self, obj):
         if obj.town:
             return obj.town
         return obj.other_town
 
-site.register(Happening, HappeningIndex)
+    def get_model(self):
+        return Happening
