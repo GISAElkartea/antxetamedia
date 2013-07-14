@@ -24,6 +24,8 @@ ADMIN_MEDIA_PREFIX = '/admin_media/'
 STATICFILES_DIRS = [join(DIR, 'static')]
 
 USE_X_FORWARDED_HOST = True
+MIDDLEWARE_CLASSES = SETTINGS.MIDDLEWARE_CLASSES
+
 TEMPLATE_DIRS = (join(DIR, 'templates'),)
 TEMPLATE_CONTEXT_PROCESSORS = SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
         'django.core.context_processors.request',
