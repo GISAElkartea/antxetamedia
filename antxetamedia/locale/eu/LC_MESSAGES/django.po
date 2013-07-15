@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-14 20:35+0200\n"
+"POT-Creation-Date: 2013-07-15 11:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -358,11 +358,11 @@ msgstr "bukaera"
 
 #: projects/models.py:10
 msgid "project"
-msgstr ""
+msgstr "proiektua"
 
 #: projects/models.py:11
 msgid "projects"
-msgstr ""
+msgstr "proiektuak"
 
 #: recordings/models.py:21
 msgid "news category"
@@ -444,7 +444,7 @@ msgstr "Zer?"
 msgid "Where?"
 msgstr "Non?"
 
-#: search/forms.py:38 templates/menu.html:49 templates/search/panel.html:6
+#: search/forms.py:38 templates/menu.html:57 templates/search/panel.html:6
 #: templates/search/panel.html.py:38
 msgid "Search"
 msgstr "Bilatu"
@@ -504,8 +504,8 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                <a href=\"http://gisa-elkartea.org/\">GISA Elkartea</a>"
-"ren eskutik\n"
+"                <a href=\"http://gisa-elkartea.org/\">GISA Elkartea</a>ren "
+"eskutik\n"
 "                "
 
 #: templates/base.html:135
@@ -535,7 +535,12 @@ msgstr "Entzun"
 msgid "Videos"
 msgstr "Bidioak"
 
-#: templates/menu.html:23 templates/recordings/programs/panel.html:19
+#: templates/menu.html:23 templates/projects/project_detail.html:6
+#: templates/projects/project_list.html:5
+msgid "Projects"
+msgstr "Proiektuak"
+
+#: templates/menu.html:31 templates/recordings/programs/panel.html:19
 #: templates/recordings/programs/program_detail.html:6
 #: templates/recordings/programs/program_list.html:5
 msgid "Programs"
