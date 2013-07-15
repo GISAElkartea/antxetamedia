@@ -44,6 +44,7 @@ TEMPLATE_CONTEXT_PROCESSORS = SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
         'antxetamedia.recordings.context_processors.news_categories',
         'antxetamedia.misc.context_processors.headlines',
         'antxetamedia.misc.context_processors.banner',
+        'antxetamedia.projects.context_processors.projects',
         )
 
 INSTALLED_APPS = (

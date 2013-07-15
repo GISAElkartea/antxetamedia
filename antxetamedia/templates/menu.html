@@ -20,6 +20,14 @@
     </li>
     {% endfor %}
 
+    <li><a href="{% url 'projects:list' %}">{% trans 'Projects' %}</a>
+        <ul class="two">
+            {% for project in project_list %}
+            <li><a href="{% url 'projects:detail' project.slug %}">{{ project }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+
     <li><a href="{% url 'programs:list' %}">{% trans 'Programs' %}</a>
     <ul class="two">
         {% for root_node in root_nodes %}
