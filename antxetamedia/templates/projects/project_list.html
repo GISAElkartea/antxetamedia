@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+{% trans 'Projects' %} | 
+{% endblock title %}
+
+
+{% block content %}
+
+{% for project in project_list %}
+
+<img src="{{ project.image.url }}" alt="{{ project.image.alt }}" />
+
+<h3 class="project"><a href="{% url 'projects:detail' project.slug %}">{{ project }}</a></h3>
+
+{% endfor %}
+
+{% endblock content %}

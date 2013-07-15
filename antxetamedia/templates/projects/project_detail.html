@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+
+{% block title %}
+{{ object }} | {% trans 'Projects' %} | 
+{% endblock title %}
+
+
+{% block content %}
+
+<img src="{{ project.image.url }}" alt="{{ project.image.alt }}" />
+<h1 class="project">{{ object }}</h1>
+
+{{ object.text }}
+
+
+{% endblock content %}
