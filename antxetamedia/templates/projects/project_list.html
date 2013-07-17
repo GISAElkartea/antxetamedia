@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load i18n static %}
+{% load i18n static thumbnail %}
 
 {% block title %}
 {% trans 'Projects' %} | 
@@ -14,7 +14,9 @@
 {% for project in project_list %}
 
 <div class="projects">
-    <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" />
+    {% thumbnail project.image "300x100" crop="center" as image %}
+        <img src="{{ image.url }}" alt="{{ image.alt }}" />
+    {% endthumbnail %}
 
     <h3><a href="{% url 'projects:detail' project.slug %}">{{ project }}</a></h3>
 </div>

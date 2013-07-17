@@ -68,6 +68,7 @@ INSTALLED_APPS = (
     'south',
     'uni_form',
     'markitup',
+    'sorl.thumbnail',
 
     'antxetamedia.multimedia',
     'antxetamedia.structure',
