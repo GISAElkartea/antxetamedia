@@ -1,17 +1,48 @@
-div.project {
+div.projects {
     width: 40%;
     margin: 2.5%;
     display: inline-block;
     background: #1B1F25;
 }
-div.project > img {
+div.projects > img {
     width: 100%;
 }
-div.project > h3 {
+div.projects > h3 {
     margin: 0;
     padding: 1em;
 }
-div.project > h3 > a {
+div.projects > h3 > a {
     color: #BAC7D4;
     font-size: .7em;
+}
+
+
+div.project {
+    font-size : .9em;
+    line-height: 2em;
+    text-align: justify;
+}
+div.project h1:first-child {
+    font-size: 1.5em;
+}
+div.project h1 {
+    color: #1b1f25;
+    font-size: 1.4em;
+}
+div.project h2 {
+    color: #1b1f25;
+    font-size: 1.3em;
+}
+div.project h3 {
+    color: black;
+    font-size: 1.2em;
+}
+div.project h4 {
+    color: black;
+    font-size: 1.1em;
+}
+div.project img {
+    margin: 1em 1em 1em 0;
+    float: left;
+    max-width: 100%;
 }

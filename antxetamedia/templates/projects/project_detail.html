@@ -12,10 +12,10 @@
 
 {% block content %}
 
-<img src="{{ project.image.url }}" alt="{{ project.image.alt }}" />
-<h1 class="project">{{ object }}</h1>
+<div class="project">
+    <h1>{{ object }}</h1>
 
-{{ object.text }}
-
+    {{ object.text }}
+</div>
 
 {% endblock content %}

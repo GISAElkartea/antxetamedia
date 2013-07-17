@@ -13,7 +13,7 @@
 
 {% for project in project_list %}
 
-<div class="project">
+<div class="projects">
     <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" />
 
     <h3><a href="{% url 'projects:detail' project.slug %}">{{ project }}</a></h3>
