@@ -13,10 +13,11 @@
 
 {% for project in project_list %}
 
-<img src="{{ project.image.url }}" alt="{{ project.image.alt }}" />
+<div class="project">
+    <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" />
 
-<h3 class="project"><a href="{% url 'projects:detail' project.slug %}">{{ project }}</a></h3>
-
+    <h3><a href="{% url 'projects:detail' project.slug %}">{{ project }}</a></h3>
+</div>
 {% endfor %}
 
 {% endblock content %}

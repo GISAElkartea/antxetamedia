@@ -1,0 +1,17 @@
+div.project {
+    width: 40%;
+    margin: 2.5%;
+    display: inline-block;
+    background: #1B1F25;
+}
+div.project > img {
+    width: 100%;
+}
+div.project > h3 {
+    margin: 0;
+    padding: 1em;
+}
+div.project > h3 > a {
+    color: #BAC7D4;
+    font-size: .7em;
+}
