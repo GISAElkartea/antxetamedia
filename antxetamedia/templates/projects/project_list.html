@@ -15,7 +15,7 @@
 
 <div class="projects">
     {% thumbnail project.image "300x100" crop="center" as image %}
-        <img src="{{ image.url }}" alt="{{ image.alt }}" />
+        <img src="{{ image.url }}" alt="{{ image.name }}" />
     {% endthumbnail %}
 
     <h3><a href="{% url 'projects:detail' project.slug %}">{{ project }}</a></h3>
