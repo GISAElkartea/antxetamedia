@@ -20,7 +20,6 @@ div.projects > h3 > a {
 div.project {
     font-size : .9em;
     line-height: 2em;
-    text-align: justify;
 }
 div.project h1:first-child {
     font-size: 1.5em;
