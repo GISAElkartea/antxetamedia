@@ -41,9 +41,11 @@ div.project h4 {
     color: black;
     font-size: 1.1em;
 }
+div.project p {
+    clear: both;
+}
 div.project img {
     margin: 1em 1em 1em 0;
     float: left;
-    clear: both;
     max-width: 100%;
 }
