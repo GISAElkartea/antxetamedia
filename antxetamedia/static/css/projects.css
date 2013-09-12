@@ -44,5 +44,6 @@ div.project h4 {
 div.project img {
     margin: 1em 1em 1em 0;
     float: left;
+    clear: both;
     max-width: 100%;
 }
