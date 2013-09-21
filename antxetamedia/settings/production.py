@@ -10,7 +10,12 @@ TEMPLATE_DEBUG = DEBUG
 SEND_BROKEN_LINK_EMAILS = False
 
 SECRET_KEY = env['SECRET_KEY']
-ALLOWED_HOSTS = ['antxetamedia.info', 'www.antxetamedia.info']
+ALLOWED_HOSTS = [
+                'antxetamedia.info', 
+                'www.antxetamedia.info',
+                'antxetairratia.com',
+                'www.antxetairratia.com',
+                ]
 
 CACHE_BACKEND = env['CACHE_BACKEND']
 CACHE_MIDDLEWARE_SECONDS = 90
