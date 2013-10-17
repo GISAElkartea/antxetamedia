@@ -95,14 +95,13 @@ div#menu {
     }
     #menu li:hover { background: #1e2329; }
     #menu li { 
-        float: left; 
-        display: block; 
+        display: inline-block; 
         text-align: center;
         border-right: .1em solid #4f5861;
     }
 
     #menu > ul { 
-        display: inline-block; 
+        display: block; 
         border: none; 
     }
 
