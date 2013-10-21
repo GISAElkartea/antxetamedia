@@ -69,11 +69,11 @@ div#header {
 
 
 div#menu {
-    margin-top: -.7em;
+    margin-top: -.5em;
     width: 100%;
     background: #2f3841;
     border-bottom: .5em solid #dbdbdb;
-    font-size: .7em;
+    font-size: .8em;
 }
     #menu form input { width: 9em; font-size: .8em; text-align: center; }
     #menu form { float: right; margin: .2em 1.7em .2em .2em; }
