@@ -95,7 +95,6 @@ div#menu {
     #menu li:hover { background: #1e2329; }
     #menu li { 
         display: inline-block; 
-        text-align: center;
         border-right: .1em solid #4f5861;
     }
 
