@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-15 11:05+0200\n"
+"POT-Creation-Date: 2013-10-21 23:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgstr "herriak"
 
 #: agenda/models.py:14 agenda/models.py:36 misc/models.py:23 misc/models.py:92
 #: multimedia/models.py:46 programming/models.py:18 programming/models.py:42
-#: projects/models.py:13 recordings/models.py:24 structure/models.py:22
+#: projects/models.py:18 recordings/models.py:24 structure/models.py:22
 msgid "name"
 msgstr "izena"
 
@@ -123,7 +123,7 @@ msgstr "bestelakoa"
 msgid "place"
 msgstr "tokia"
 
-#: agenda/models.py:48 misc/models.py:93 projects/models.py:14
+#: agenda/models.py:48 misc/models.py:93 projects/models.py:19
 #: recordings/models.py:50 structure/models.py:29
 msgid "image"
 msgstr "irudia"
@@ -166,7 +166,7 @@ msgstr "widgeta"
 msgid "widgets"
 msgstr "widgetak"
 
-#: misc/models.py:36 misc/models.py:118 projects/models.py:15
+#: misc/models.py:36 misc/models.py:118 projects/models.py:20
 #: recordings/models.py:43
 msgid "text"
 msgstr "testua"
@@ -356,13 +356,21 @@ msgstr "hasiera"
 msgid "ending"
 msgstr "bukaera"
 
-#: projects/models.py:10
+#: projects/models.py:15
 msgid "project"
 msgstr "proiektua"
 
-#: projects/models.py:11
+#: projects/models.py:16
 msgid "projects"
 msgstr "proiektuak"
+
+#: projects/models.py:21
+msgid "aside"
+msgstr "ondoko panela"
+
+#: projects/models.py:23
+msgid "beginning date"
+msgstr "hasiera data"
 
 #: recordings/models.py:21
 msgid "news category"
@@ -527,7 +535,8 @@ msgid "News"
 msgstr "Berriak"
 
 #: templates/frontpage.html:84 templates/frontpage.html.py:113
-#: templates/frontpage.html:143 templates/recordings/recording.html:37
+#: templates/frontpage.html:143 templates/projects/project_detail.html:27
+#: templates/recordings/recording.html:37
 msgid "Play"
 msgstr "Entzun"
 
@@ -583,9 +592,21 @@ msgstr "Ekoizleak"
 msgid "Categories"
 msgstr "Kategoriak"
 
+#: templates/projects/project_detail.html:29
 #: templates/recordings/recording.html:39
 msgid "Download"
 msgstr "Jeitsi"
+
+#: templates/projects/project_list.html:33
+#, python-format
+msgid ""
+"\n"
+"                Projects from %(year)s\n"
+"                "
+msgstr ""
+"\n"
+"                %(year)s urteko proiektuak\n"
+"                "
 
 #: templates/recordings/interviews/interview_detail.html:6
 #: templates/recordings/interviews/interview_list.html:5

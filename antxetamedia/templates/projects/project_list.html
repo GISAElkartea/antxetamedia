@@ -29,7 +29,11 @@
 <ul>
     {% for year in years %}
     <li>
-        <a href="{% url 'projects:year' year.year %}">{{ year.year }}</a>
+        <h3><a href="{% url 'projects:year' year.year %}">
+                {% blocktrans with year.year as year %}
+                Projects from {{ year }}
+                {% endblocktrans %}
+        </a></h3>
     </li>
     {% endfor %}
 </ul>
