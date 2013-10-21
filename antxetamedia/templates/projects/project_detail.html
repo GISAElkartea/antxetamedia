@@ -11,13 +11,15 @@
 {% endblock css %}
 
 {% block content %}
-
 <div class="project">
     <h1>{{ object }}</h1>
 
     {{ object.text }}
 </div>
+{% endblock content %}
 
+{% block panel %}
+{{ object.aside }}
 <div class="play">
     {% for object in object.medias.select_related %}
     <div>
@@ -28,16 +30,9 @@
     </div>
     {% endfor %}
 </div>
-
-
 {% for object in object.embeded_medias.select_related %}
 <div class="video">
     {{ object.embed|safe }}
 </div>
 {% endfor %}
-
-{% endblock content %}
-
-{% block panel %}
-{{ object.aside }}
 {% endblock panel %}
