@@ -8,7 +8,8 @@ from antxetamedia.multimedia.admin import (MediaRelated, MediaInline,
 
 
 class ProjectAdmin(MediaRelated):
-    list_display = ['name', 'img']
+    fields = (('name', 'beginning'), 'text', 'aside', 'image')
+    list_display = ['name', 'beginning', 'img']
     img = admin_image('image')
     inlines = MediaInline, EmbededMediaInline
 

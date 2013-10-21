@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.db import models
 from django.utils.translation import ugettext as _
 from django.contrib.contenttypes import generic
@@ -16,7 +18,9 @@ class Project(models.Model):
     name = models.CharField(_('name'), max_length=200)
     image = models.ImageField(_('image'), blank=True, upload_to='img')
     text = MarkupField(_('text'))
-    aside = MarkupField(_('aside'), blank=True, null=True)
+    aside = MarkupField(_('aside'), blank=True, null=True, default='')
+    beginning = models.DateField(default=date.today,
+                                 verbose_name=_('beginning date'))
 
     medias = generic.GenericRelation(Media)
     embeded_medias = generic.GenericRelation(EmbededMedia)

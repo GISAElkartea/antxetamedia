@@ -11,7 +11,7 @@
 
 {% block content %}
 
-{% for project in project_list %}
+{% for project in object_list %}
 
 <div class="projects">
     {% thumbnail project.image "300x100" crop="center" as image %}
@@ -23,3 +23,14 @@
 {% endfor %}
 
 {% endblock content %}
+
+
+{% block panel %}
+<ul>
+    {% for year in years %}
+    <li>
+        <a href="{% url 'projects:year' year.year %}">{{ year.year }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock panel %}
