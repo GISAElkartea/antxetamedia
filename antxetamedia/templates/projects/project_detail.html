@@ -18,6 +18,24 @@
     {{ object.text }}
 </div>
 
+<div class="play">
+    {% for object in object.medias.select_related %}
+    <div>
+        <a class="play" href="{{ object.get_url }}"><img 
+            src="{% static 'css/img/play.png' %}" alt="{% trans 'Play' %}" /></a>
+        <a class="download" href="{{ object.get_url }}"><img
+            src="{% static 'css/img/download.png' %}" alt="{% trans 'Download' %}" /></a>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% for object in object.embeded_medias.select_related %}
+<div class="video">
+    {{ object.embed|safe }}
+</div>
+{% endfor %}
+
 {% endblock content %}
 
 {% block panel %}
