@@ -16,7 +16,7 @@ class FrontPageView(TemplateView):
         for node in Node.objects.filter(on_frontpage=True):
             interviews[node] = Program.objects.filter(
                     program__in=node.descendents(including_this=True),
-                    type=INTERVIEW,)[:10]
+                    )[:10]
 
         c.update({
             'news': News.objects.all()[:10],
