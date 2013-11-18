@@ -19,7 +19,7 @@ class FrontPageView(TemplateView):
                     )[:10]
 
         c.update({
-            'news': News.objects.all()[:10],
+            'news': News.objects.all()[:13],
             'interviews': interviews,
             'orphaned_media': get_orphaned_media()[:10],
             'happenings': Happening.objects.future()[:10],
