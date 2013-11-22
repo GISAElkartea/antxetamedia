@@ -67,20 +67,20 @@
     <h2><a href="{% url 'news:list' %}">{% trans 'News' %}</a></h2>
     {% for object in news %}
 
-    <div class="recording 
+    <div class="recording
         {% if forloop.first %}first{% else %}hidden{% endif %}">
 
         <div class="date">{{ object.pub_date }}</div>
         <h4><a href="{{ object.get_absolute_url }}">{{ object }}</a></h4>
 
         {% if forloop.first and object.image %}
-        <img src="{{ object.image.url }}" 
+        <img src="{{ object.image.url }}"
             alt="{{ object.image.name }}" />
         {% endif %}
 
         <div class="body">
             {% for object in object.medias.all %}
-            <a class="play" href="{{ object.get_url }}"><img 
+            <a class="play" href="{{ object.get_url }}"><img
                 alt="{% trans 'Play' %}" src="{% static 'css/img/play.png' %}" /></a>
             {% endfor %}
 
@@ -103,13 +103,13 @@
         <h4><a href="{{ object.get_absolute_url }}">{{ object }}</a></h4>
 
         {% if forloop.first and object.image %}
-        <img src="{{ object.image.url }}" 
+        <img src="{{ object.image.url }}"
             alt="{{ object.image.name }}" />
         {% endif %}
 
         <div class="body">
             {% for object in object.medias.all %}
-            <a class="play" href="{{ object.get_url }}"><img 
+            <a class="play" href="{{ object.get_url }}"><img
                 alt="{% trans 'Play' %}" src="{% static 'css/img/play.png' %}" /></a>
             {% endfor %}
 
@@ -121,10 +121,10 @@
 </div>
 
 
-{% for node,programs in interviews.items %}
+{% for node,items in programs.items %}
 <div class="square">
-    <h2><a href="{% url 'interviews:node' node.slug %}">{{ node }}</a></h2>
-    {% for object in programs %}
+    <h2><a href="{% url 'programs:node' node.slug %}">{{ node }}</a></h2>
+    {% for object in items %}
 
     <div class="recording
         {% if forloop.first %}first{% else %}hidden{% endif %}">
@@ -133,13 +133,13 @@
         <h4><a href="{{ object.get_absolute_url }}">{{ object }}</a></h4>
 
         {% if forloop.first and object.image %}
-        <img src="{{ object.image.url }}" 
+        <img src="{{ object.image.url }}"
             alt="{{ object.image.name }}" />
         {% endif %}
 
         <div class="body">
             {% for object in object.medias.all %}
-            <a class="play" href="{{ object.get_url }}"><img 
+            <a class="play" href="{{ object.get_url }}"><img
                 alt="{% trans 'Play' %}" src="{% static 'css/img/play.png' %}" /></a>
             {% endfor %}
 

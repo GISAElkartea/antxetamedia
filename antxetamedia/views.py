@@ -12,15 +12,15 @@ class FrontPageView(TemplateView):
     def get_context_data(self, **kwargs):
         c = super(FrontPageView, self).get_context_data(**kwargs)
 
-        interviews = {}
+        programs = {}
         for node in Node.objects.filter(on_frontpage=True):
-            interviews[node] = Program.objects.filter(
+            programs[node] = Program.objects.filter(
                     program__in=node.descendents(including_this=True),
                     )[:10]
 
         c.update({
             'news': News.objects.all()[:13],
-            'interviews': interviews,
+            'programs': programs,
             'orphaned_media': get_orphaned_media()[:10],
             'happenings': Happening.objects.future()[:10],
             'widgets': Widget.objects.all(),
