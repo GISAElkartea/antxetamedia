@@ -14,24 +14,5 @@
 
 
 {% block panel %}
-
-{% if children %}
-<h4>{% trans 'Programs' %}</h4>
-<ul>
-    {% for object in children %}
-    <li><a href="{% url 'programs:node' object.slug %}">{{ object }}</a></li>
-    {% endfor %}
-</ul>
-{% endif %}
-
-
-{% if latest %}
-<h4>{% trans 'Latest' %}</h4>
-<ul>
-    {% for object in latest %}
-    <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
-    {% endfor %}
-</ul>
-{% endif %}
-
+{{ reason.panel }}
 {% endblock panel %}

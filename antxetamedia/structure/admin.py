@@ -15,6 +15,6 @@ class NodeAdmin(admin.ModelAdmin):
             (None, {
                 'fields': (('name', 'on_menu', 'on_frontpage'), 'parent')}),
             (_('Details'), {
-                'fields': ('description', 'link', 'image')}),
+                'fields': ('description', 'link', 'image', 'panel')}),
             )
 admin.site.register(Node, NodeAdmin)

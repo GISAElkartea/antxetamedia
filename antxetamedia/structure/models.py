@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext as _
 
-from markupfield.fields import MarkupField
 from autoslug.fields import AutoSlugField
+from markitup.fields import MarkupField
 
 class NodeManager(models.Manager):
     def roots(self):
@@ -20,7 +20,8 @@ class Node(models.Model):
         verbose_name_plural = _('nodes')
 
     name = models.CharField(_('name'), max_length=100, unique=True)
-    description = MarkupField(_('description'), blank=True, markup_type='plain')
+    description = MarkupField(_('description'), default='', blank=True)
+    panel = MarkupField(_('panel'), default='', blank=True)
 
     on_menu = models.BooleanField(_('on menu'), default=False)
     on_frontpage = models.BooleanField(_('on frontpage'), default=False)
@@ -31,7 +32,7 @@ class Node(models.Model):
     slug = AutoSlugField(editable=False, always_update=True,
             populate_from='name', unique=True)
 
-    parent = models.ForeignKey('self', verbose_name=_('parent'), 
+    parent = models.ForeignKey('self', verbose_name=_('parent'),
             related_name='children_set', null=True, blank=True, db_index=True)
 
     def __unicode__(self):
