@@ -5,7 +5,6 @@ from django.core.validators import ValidationError
 from django.utils.encoding import smart_str
 
 from markupfield.fields import MarkupField
-from taggit.managers import TaggableManager
 from autoslug.fields import AutoSlugField
 from datetime import date
 
@@ -46,7 +45,6 @@ class Recording(models.Model):
     embeded_medias = generic.GenericRelation(EmbededMedia)
 
     link = models.URLField(_('link'), blank=True)
-    tags = TaggableManager(blank=True)
     image = models.ImageField(_('image'), blank=True, upload_to='img')
 
 
@@ -83,13 +81,11 @@ class News(Recording):
         super(News, self).save(*args, **kwargs)
 
     def metadata(self):
-        tags = ';'.join([ smart_str(tag) for tag in self.tags.iterator() ])
         return {
                 'x-archive-meta-title': smart_str(self),
                 'x-archive-meta-creator': 'Berriak',
                 'x-archive-meta-description': smart_str(self.text.raw),
-                'x-archive-meta-subject': tags,
-                'x-archive-meta-keywords': tags,
+                'x-archive-meta-subject': smart_str(self),
                 'x-archive-meta-date': self.pub_date.strftime('%Y-%m-%d'),
                 }
 
@@ -142,12 +138,10 @@ class Program(Recording):
         super(Program, self).save(*args, **kwargs)
 
     def metadata(self):
-        tags = ';'.join([ smart_str(tag) for tag in self.tags.iterator() ])
         return {
                 'x-archive-meta-title': smart_str(self),
                 'x-archive-meta-creator': smart_str(self.program),
                 'x-archive-meta-description': smart_str(self.text.raw),
-                'x-archive-meta-subject': tags,
-                'x-archive-meta-keywords': tags,
+                'x-archive-meta-subject': smart_str(self),
                 'x-archive-meta-date': self.pub_date.strftime('%Y-%m-%d'),
                 }

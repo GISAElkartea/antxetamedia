@@ -1,15 +1,12 @@
 from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 
-from taggit.models import Tag, TaggedItem
-
 from antxetamedia.recordings.models import News, NewsCategory
 
 
 def context():
     return {
         'latest': News.objects.order_by('-pub_date')[:10],
-        'tags': TaggedItem.tags_for(News),
         }
 
 
@@ -37,17 +34,6 @@ class CategoryNewsList(BaseNewsList):
     def get_context_data(self, **kwargs):
         c = super(CategoryNewsList, self).get_context_data(**kwargs)
         c['reason'] = self.category
-        return c
-
-
-class TagNewsList(BaseNewsList):
-    def get_queryset(self):
-        self.tag = get_object_or_404(Tag, slug=self.kwargs['slug'])
-        return News.objects.filter(tags=self.tag)
-
-    def get_context_data(self, **kwargs):
-        c = super(TagNewsList, self).get_context_data(**kwargs)
-        c['reason'] = self.tag
         return c
 
 

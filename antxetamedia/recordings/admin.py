@@ -29,7 +29,7 @@ class NewsAdmin(RecordAdmin):
             (None, {
                 'fields': (('title', 'principal'), 'text')}),
             (_('Details'), {
-                'fields': ('categories', 'tags', 'image', 'link', 'pub_date')}),
+                'fields': ('categories', 'image', 'link', 'pub_date')}),
             )
 admin.site.register(News, NewsAdmin)
 
@@ -43,6 +43,6 @@ class ProgramAdmin(RecordAdmin):
             (None, {
                 'fields': (('title', 'principal'), 'type', 'text')}),
             (_('Details'), {
-                'fields': ('program', 'tags', 'image', 'link', 'pub_date')}),
+                'fields': ('program', 'image', 'link', 'pub_date')}),
             )
 admin.site.register(Program, ProgramAdmin)

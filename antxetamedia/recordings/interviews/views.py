@@ -1,8 +1,6 @@
 from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 
-from taggit.models import Tag, TaggedItem
-
 from antxetamedia.structure.models import Node
 from antxetamedia.recordings.models import INTERVIEW
 from antxetamedia.recordings.models import Program
@@ -12,7 +10,6 @@ from antxetamedia.recordings.models import Program
 def context():
     return {
         'latest': Program.objects.filter(type=INTERVIEW).order_by('-pub_date')[:10],
-        'tags': TaggedItem.tags_for(Program).filter(program__type=INTERVIEW),
         }
 
 
@@ -39,17 +36,6 @@ class NodeInterviewList(BaseInterviewList):
     def get_context_data(self, **kwargs):
         c = super(NodeInterviewList, self).get_context_data(**kwargs)
         c['reason'] = self.node
-        return c
-
-
-class TagInterviewList(BaseInterviewList):
-    def get_queryset(self):
-        self.tag = get_object_or_404(Tag, slug=self.kwargs['slug'])
-        return super(TagInterviewList, self).get_queryset().filter(tags=self.tag)
-
-    def get_context_data(self, **kwargs):
-        c = super(TagInterviewList, self).get_context_data(**kwargs)
-        c['reason'] = self.tag
         return c
 
 

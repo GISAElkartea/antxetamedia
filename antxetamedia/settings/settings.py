@@ -61,8 +61,6 @@ INSTALLED_APPS = (
 
     'autoslug',
     'colorful',
-    'taggit',
-    'taggit_templatetags',
     'dajaxice',
     'haystack',
     'south',
