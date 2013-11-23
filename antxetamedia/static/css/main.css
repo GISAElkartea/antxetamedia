@@ -29,7 +29,7 @@ ul.errorlist, {
 div#wrap {
     overflow-y: auto;
     overflow-x: hidden;
-    margin: 0 2% 0 2%;
+    margin: 0 2%;
     padding-bottom: 2%;
     background: #efefef;
 }
@@ -65,7 +65,6 @@ div#header {
         -moz-border-radius: .3em;
         border: .1em solid #a3aeba;
     }
-
 
 
 div#menu {
