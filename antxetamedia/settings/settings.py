@@ -56,7 +56,6 @@ INSTALLED_APPS = (
     'grappelli.dashboard',
     'grappelli',
     'django.contrib.admin',
-    'django.contrib.markup',
     'django.contrib.sitemaps',
 
     'autoslug',
