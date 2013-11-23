@@ -2,19 +2,24 @@ div.square iframe, div.square object, div.square embed { max-width: 14em; max-he
 div.square div.date { font-size: .6em; font-weight: bold; }
 
 div.square {
-    width: 39%;
+    width: 48%;
     float: left;
     padding: 0;
     margin-bottom: 2em;
     cursor: w-resize;
+    margin-left: 2%;
 }
 div.square#principal {
-    width: 56%;
-    margin: 0 1em 1em 0;
+    width: 50%;
+    margin: 0;
     padding: 0 .5em 0 0;
     cursor: auto;
     border-right: gray solid 0.15em;
     background: #e8e8e8;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
     div.square .hidden { display: none; }
     div.square#principal .hidden { display: block; }
