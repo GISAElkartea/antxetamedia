@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-21 23:06+0200\n"
+"POT-Creation-Date: 2013-11-26 19:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgstr "herriak"
 
 #: agenda/models.py:14 agenda/models.py:36 misc/models.py:23 misc/models.py:92
 #: multimedia/models.py:46 programming/models.py:18 programming/models.py:42
-#: projects/models.py:18 recordings/models.py:24 structure/models.py:22
+#: projects/models.py:18 recordings/models.py:23 structure/models.py:22
 msgid "name"
 msgstr "izena"
 
@@ -124,13 +124,13 @@ msgid "place"
 msgstr "tokia"
 
 #: agenda/models.py:48 misc/models.py:93 projects/models.py:19
-#: recordings/models.py:50 structure/models.py:29
+#: recordings/models.py:48 structure/models.py:30
 msgid "image"
 msgstr "irudia"
 
 #: agenda/models.py:49 misc/models.py:42 misc/models.py:45
-#: multimedia/models.py:30 programming/models.py:46 recordings/models.py:48
-#: structure/models.py:28
+#: multimedia/models.py:30 programming/models.py:46 recordings/models.py:47
+#: structure/models.py:29
 msgid "link"
 msgstr "lotura"
 
@@ -167,7 +167,7 @@ msgid "widgets"
 msgstr "widgetak"
 
 #: misc/models.py:36 misc/models.py:118 projects/models.py:20
-#: recordings/models.py:43
+#: recordings/models.py:42
 msgid "text"
 msgstr "testua"
 
@@ -236,7 +236,6 @@ msgid "about us"
 msgstr "nortzuk gara"
 
 #: multimedia/admin.py:20 multimedia/admin.py:34
-#: templates/recordings/recording.html:69
 msgid "Related"
 msgstr "erlazionatua"
 
@@ -284,7 +283,7 @@ msgstr "media"
 msgid "medias (audio: MP3 | video: FLV,MP4,H.264)"
 msgstr "mediak (audioa: MP3 | bideoa: FLV,MP4,H.264)"
 
-#: multimedia/models.py:59 recordings/models.py:59 recordings/models.py:103
+#: multimedia/models.py:59 recordings/models.py:57 recordings/models.py:99
 msgid "title"
 msgstr "izenburua"
 
@@ -324,7 +323,7 @@ msgstr "ekoizleak"
 msgid "category"
 msgstr "kategoria"
 
-#: programming/models.py:34 recordings/models.py:64
+#: programming/models.py:34 recordings/models.py:62
 msgid "categories"
 msgstr "kategoriak"
 
@@ -372,55 +371,55 @@ msgstr "ondoko panela"
 msgid "beginning date"
 msgstr "hasiera data"
 
-#: recordings/models.py:21
+#: recordings/models.py:20
 msgid "news category"
 msgstr "berrien kategoria"
 
-#: recordings/models.py:22
+#: recordings/models.py:21
 msgid "news categories"
 msgstr "berrien kategoriak"
 
-#: recordings/models.py:40
+#: recordings/models.py:39
 msgid "principal"
 msgstr "nagusia"
 
-#: recordings/models.py:41
+#: recordings/models.py:40
 msgid "publication date"
 msgstr "argitarapen data"
 
-#: recordings/models.py:55
+#: recordings/models.py:53
 msgid "news "
 msgstr "berria"
 
-#: recordings/models.py:56
+#: recordings/models.py:54
 msgid "news"
 msgstr "berriak"
 
-#: recordings/models.py:99 recordings/models.py:111
+#: recordings/models.py:95 recordings/models.py:107
 msgid "program"
 msgstr "irratsaioa"
 
-#: recordings/models.py:100
+#: recordings/models.py:96
 msgid "programs"
 msgstr "irratsaioak"
 
-#: recordings/models.py:104
+#: recordings/models.py:100
 msgid "Left empty if full program"
 msgstr "Hutsik utzi saio osoa bada"
 
-#: recordings/models.py:106
+#: recordings/models.py:102
 msgid "type"
 msgstr "mota"
 
-#: recordings/models.py:107
+#: recordings/models.py:103
 msgid "interview"
 msgstr "elkarrizketa"
 
-#: recordings/models.py:108
+#: recordings/models.py:104
 msgid "full program"
 msgstr "saio osoa"
 
-#: recordings/models.py:129
+#: recordings/models.py:125
 msgid "You must set a title for an interview"
 msgstr "Elkarrizketa baterako izenburua behar da"
 
@@ -465,15 +464,19 @@ msgstr "nodoa"
 msgid "nodes"
 msgstr "nodoak"
 
-#: structure/models.py:25
+#: structure/models.py:24
+msgid "panel"
+msgstr "panela"
+
+#: structure/models.py:26
 msgid "on menu"
 msgstr "menuan"
 
-#: structure/models.py:26
+#: structure/models.py:27
 msgid "on frontpage"
 msgstr "portadan"
 
-#: structure/models.py:34
+#: structure/models.py:35
 msgid "parent"
 msgstr "gurasoa"
 
@@ -549,8 +552,7 @@ msgstr "Bidioak"
 msgid "Projects"
 msgstr "Proiektuak"
 
-#: templates/menu.html:31 templates/recordings/programs/panel.html:19
-#: templates/recordings/programs/program_detail.html:6
+#: templates/menu.html:31 templates/recordings/programs/program_detail.html:6
 #: templates/recordings/programs/program_list.html:5
 msgid "Programs"
 msgstr "Irratsaioak"
@@ -613,9 +615,7 @@ msgstr ""
 msgid "Interviews"
 msgstr "Elkarrizketak"
 
-#: templates/recordings/interviews/panel.html:18
 #: templates/recordings/news/panel.html:18
-#: templates/recordings/programs/panel.html:29
 msgid "Latest"
 msgstr "Azkenekoak"
 
