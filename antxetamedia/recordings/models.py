@@ -4,7 +4,7 @@ from django.utils.translation import ugettext as _
 from django.core.validators import ValidationError
 from django.utils.encoding import smart_str
 
-from markupfield.fields import MarkupField
+from markitup.fields import MarkupField
 from autoslug.fields import AutoSlugField
 from datetime import date
 
@@ -39,7 +39,7 @@ class Recording(models.Model):
     principal = models.BooleanField(_('principal'), default=False)
     pub_date = models.DateField(_('publication date'), default=date.today())
 
-    text = MarkupField(_('text'), markup_type='plain')
+    text = MarkupField(_('text'), default='')
 
     medias = generic.GenericRelation(Media)
     embeded_medias = generic.GenericRelation(EmbededMedia)
