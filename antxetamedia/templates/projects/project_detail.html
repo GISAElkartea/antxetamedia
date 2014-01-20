@@ -27,6 +27,9 @@
             src="{% static 'css/img/play.png' %}" alt="{% trans 'Play' %}" /></a>
         <a class="download" href="{{ object.get_url }}"><img
             src="{% static 'css/img/download.png' %}" alt="{% trans 'Download' %}" /></a>
+        {% if object.title %}
+        <h6>{{ object.title }}</h6>
+        {% endif %}
     </div>
     {% endfor %}
 </div>

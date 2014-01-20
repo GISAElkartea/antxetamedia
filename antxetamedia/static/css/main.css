@@ -9,17 +9,17 @@ a { color: #37538c; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 div.play { float: left; }
-a.play img, a.download img { 
+a.play img, a.download img {
     float: left;
-    margin: .5em .2em 0 0; 
-    width: 2em; 
+    margin: .5em .2em 0 0;
+    width: 2em !important;
 }
 
 img { border: 0; }
 input, textarea { background: #dcdcdc; border: .1em solid black; }
 
-ul.errorlist, { 
-    color: red; 
+ul.errorlist, {
+    color: red;
     margin: 0;
     padding: 0;
     font-weight: bold;
@@ -34,7 +34,7 @@ div#wrap {
     background: #efefef;
 }
 
-div#headlines { 
+div#headlines {
     width: 99%;
     height: 1em;
     margin: 0;
@@ -48,7 +48,7 @@ div#header {
 }
     div#header h1 { margin: 0; }
     div#header img#banner { width: 100%; }
-    div#header img#logo { 
+    div#header img#logo {
         position: absolute;
         top: 1em;
         left: 1em;
@@ -59,7 +59,7 @@ div#header {
         position: absolute;
         top: 7em;
         right: 5%;
-        padding: .3em;       
+        padding: .3em;
         font-weight: bold;
         background: #2f3841;
         -moz-border-radius: .3em;
@@ -76,53 +76,53 @@ div#menu {
     #menu form input { width: 9em; font-size: .8em; text-align: center; }
     #menu form { float: right; margin: .2em 1.7em .2em .2em; }
     #menu a:hover { text-decoration: none; color: #868f99; }
-    #menu a { 
-        display: block; 
-        padding: .3em .4em .3em .4em; 
-        color: #a3aeba; 
-        font-weight: bold; 
+    #menu a {
+        display: block;
+        padding: .3em .4em .3em .4em;
+        color: #a3aeba;
+        font-weight: bold;
     }
-    #menu ul { 
+    #menu ul {
         margin: 0;
         padding: 0;
-        display: none; 
+        display: none;
         background: #2f3841;
         border-width: .1em 0 .1em .1em;
         border-style: solid;
         border-color: #4f5861;
     }
     #menu li:hover { background: #1e2329; }
-    #menu li { 
-        display: inline-block; 
+    #menu li {
+        display: inline-block;
         border-right: .1em solid #4f5861;
     }
 
-    #menu > ul { 
-        display: block; 
-        border: none; 
+    #menu > ul {
+        display: block;
+        border: none;
     }
 
     #menu ul > li:hover > ul { display: block; }
-    #menu ul > li ul.two  { 
+    #menu ul > li ul.two  {
         position: absolute;
         left: 2%;
         width: 96%;
     }
 
-    #menu ul > li > ul > li:hover > ul { 
-        display: block; 
-        position: absolute; 
+    #menu ul > li > ul > li:hover > ul {
+        display: block;
+        position: absolute;
     }
-    #menu ul > li > ul > li > ul > li { 
+    #menu ul > li > ul > li > ul > li {
         float: none;
-        border-width: 0 .1em .1em 0; 
+        border-width: 0 .1em .1em 0;
         border-style: solid;
         border-color: #4f5861;
     }
 
-    #menu ul > li > ul > li > ul > li:hover > ul { 
-        display: inline; 
-        position: absolute; 
+    #menu ul > li > ul > li > ul > li:hover > ul {
+        display: inline;
+        position: absolute;
     }
 
 
@@ -149,21 +149,21 @@ div#panel {
     #panel img { width: 100%; }
 
     #panel a { color: #313b64; }
-    #panel h3, #panel h4, #panel h5 { 
-        margin: 0; 
-        color: #2F3841; 
-    } 
+    #panel h3, #panel h4, #panel h5 {
+        margin: 0;
+        color: #2F3841;
+    }
 
     #panel ul { margin: 0 0 0 .5em; padding: 0; }
     #panel li {
-        margin: 0 0 .7em .5em; 
-        padding: 0; 
+        margin: 0 0 .7em .5em;
+        padding: 0;
         color: #2f3841;
         list-style: none;
     }
-    
 
-#content {  
+
+#content {
     margin: 2%;
     overflow: hidden;
 }
@@ -209,8 +209,8 @@ div#panel {
     bottom: 0;
 }
     #container #object #player { width: 100%; height: 100%; }
-    #container #object a.close { 
-        display: none; 
+    #container #object a.close {
+        display: none;
         float: right;
         opacity: clear;
     }
@@ -237,14 +237,14 @@ div#panel {
     }
 
 div.ui-datepicker { font-size: .8em; }
-.ui-datepicker .ui-datepicker-header { 
-    border: .1em solid #b3beca; 
+.ui-datepicker .ui-datepicker-header {
+    border: .1em solid #b3beca;
     background: #a3aeba; }
 .ui-datepicker td.fill a { color: #2f3841; background: #a3aeba; }
-.ui-datepicker td a { border: .1em solid #CCCCCC; } 
-.ui-datepicker td.ui-datepicker-today a { 
+.ui-datepicker td a { border: .1em solid #CCCCCC; }
+.ui-datepicker td.ui-datepicker-today a {
     border: .1em solid #CCCCCC;
-    color: #2f3841; 
+    color: #2f3841;
     background: #dbdbdb; }
 .ui-datepicker td.ui-datepicker-current-day a { border: .1em solid black; }
 
