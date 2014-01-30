@@ -52,7 +52,7 @@
         {% endblock js %}
     </head>
 
-    <body>
+    <body class="{% block body-class %}{% endblock body-class %}">
         <div id="wrap">
             {% if headlines %}
             <div id="headlines">
