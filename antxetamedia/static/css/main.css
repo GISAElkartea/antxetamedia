@@ -248,3 +248,16 @@ div.ui-datepicker { font-size: .8em; }
     background: #dbdbdb; }
 .ui-datepicker td.ui-datepicker-current-day a { border: .1em solid black; }
 
+body.kiroletik { background: #e6e6e6; }
+body.kiroletik > div#wrap {
+    background: #f9f9f9;
+}
+body.kiroletik div#header {
+    background-image: url('../img/atletismoa.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+body.kiroletik div#header img#banner {
+    opacity: 0;
+}
+
