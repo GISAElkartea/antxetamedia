@@ -35,12 +35,13 @@ div#wrap {
 }
 
 div#headlines {
-    width: 99%;
+    width: 100%;
     height: 1em;
     margin: 0;
     padding: .4em;
     font-size: .9em;
     background: #cdcdcd;
+    height: 1.5em;
 }
 
 div#header {
@@ -72,9 +73,10 @@ div#menu {
     background: #2f3841;
     border-bottom: .5em solid #dbdbdb;
     font-size: .8em;
+    position: relative;
 }
     #menu form input { width: 9em; font-size: .8em; text-align: center; }
-    #menu form { float: right; margin: .2em 1.7em .2em .2em; }
+    #menu form { position: absolute; top: .3em; right: .3em; }
     #menu a:hover { text-decoration: none; color: #868f99; }
     #menu a {
         display: block;
@@ -86,7 +88,6 @@ div#menu {
         margin: 0;
         padding: 0;
         display: none;
-        background: #2f3841;
         border-width: .1em 0 .1em .1em;
         border-style: solid;
         border-color: #4f5861;
@@ -129,7 +130,8 @@ div#menu {
 
 div#feeds {
     position: absolute;
-    right: 3%;
+    top: -.3em;
+    right: 0;
 }
     div#feeds img { width: 2.5em; }
 
@@ -251,17 +253,22 @@ div.ui-datepicker { font-size: .8em; }
 body.kiroletik { background: #e6e6e6; }
 body.kiroletik > div#wrap {
     background: #f9f9f9;
+    position: relative;
 }
 body.kiroletik div#header {
-    background-image: url('../img/atletismoa.png');
+    background-image: url('img/atletismoa.png');
     background-size: 100%;
     background-repeat: no-repeat;
 }
-body.kiroletik div#header img#banner {
-    opacity: 0;
-}
+    body.kiroletik div#header img#banner {
+        opacity: 0;
+    }
 body.kiroletik div#menu {
     background: #032737;
-    color: #f9f9f9;
 }
-
+    body.kiroletik div#menu a {
+        color: #f9f9f9;
+    }
+body.kiroletik div#content div#reason {
+    display: none;
+}
