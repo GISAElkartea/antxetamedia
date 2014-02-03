@@ -70,7 +70,6 @@ div#header {
 
 div#menu {
     width: 100%;
-    background: #2f3841;
     border-bottom: .5em solid #dbdbdb;
     font-size: .8em;
     position: relative;
@@ -91,6 +90,7 @@ div#menu {
         border-width: .1em 0 .1em .1em;
         border-style: solid;
         border-color: #4f5861;
+        background: #2f3841;
     }
     #menu li:hover { background: #1e2329; }
     #menu li {
@@ -181,7 +181,7 @@ div#panel {
         #content #reason img { margin: 1em; width: 5em; float: left;}
         #content #reason p.link { text-align: center; }
         #content #reason p {
-            margin: 0;
+            /margin: 0;
             padding: 1em;
             background: #E8E8E8;
             text-align: justify;
@@ -263,7 +263,7 @@ body.kiroletik div#header {
     body.kiroletik div#header img#banner {
         opacity: 0;
     }
-body.kiroletik div#menu {
+body.kiroletik div#menu ul {
     background: #032737;
 }
     body.kiroletik div#menu a {
@@ -271,4 +271,17 @@ body.kiroletik div#menu {
     }
 body.kiroletik div#content div#reason {
     display: none;
+}
+body.kiroletik div#content div.recording {
+    width: 75%;
+}
+body.kiroletik div#content div.recording div.date {
+    color: #032737;
+}
+body.kiroletik div#content div.recording div.section {
+    float: left;
+}
+body.kiroletik div#content div.recording h3 a {
+    font-weight: normal;
+    color: #c92800;
 }

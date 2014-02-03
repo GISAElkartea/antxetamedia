@@ -7,7 +7,7 @@
     {% if categories %}
     <div class="section">
         {% for object in categories %}
-        <a href="{{ object.get_absolute_url }}">{{ object }}</a>
+        <a href="{{ object.get_absolute_url }}" class="{{ object }}">{{ object }}</a>
         {% endfor %}
     </div>
     {% endif %}
