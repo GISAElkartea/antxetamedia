@@ -260,4 +260,8 @@ body.kiroletik div#header {
 body.kiroletik div#header img#banner {
     opacity: 0;
 }
+body.kiroletik div#menu {
+    background: #032737;
+    color: #f9f9f9;
+}
 
