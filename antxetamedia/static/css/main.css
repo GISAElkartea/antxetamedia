@@ -181,7 +181,7 @@ div#panel {
         #content #reason img { margin: 1em; width: 5em; float: left;}
         #content #reason p.link { text-align: center; }
         #content #reason p {
-            /margin: 0;
+            margin: 0;
             padding: 1em;
             background: #E8E8E8;
             text-align: justify;
