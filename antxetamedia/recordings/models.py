@@ -91,6 +91,8 @@ class News(Recording):
 
 
 class Program(Recording):
+    INTERVIEW = INTERVIEW
+    FULL_PROGRAM = FULL_PROGRAM
     class Meta:
         verbose_name = _('program')
         verbose_name_plural = _('programs')

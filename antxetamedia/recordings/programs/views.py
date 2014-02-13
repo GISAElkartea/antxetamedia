@@ -41,6 +41,8 @@ class NodeProgramList(BaseProgramList):
 
     def get_context_data(self, **kwargs):
         c = super(NodeProgramList, self).get_context_data(**kwargs)
+        c['full_programs'] = self.get_queryset().filter(type=Program.FULL_PROGRAM)
+        c['interviews'] = self.get_queryset().filter(type=Program.INTERVIEW)
         c['reason'] = self.node
         c['node_list'] = self.node.children_set.select_related()
         return c

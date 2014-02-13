@@ -1,3 +1,19 @@
+#content div.full_programs, #content div.interviews {
+    display: none;
+}
+body.kiroletik div#content div.recording {
+    width: 75%;
+}
+body.kiroletik div#content div.recording div.date {
+    color: #032737;
+}
+body.kiroletik div#content div.recording div.section {
+    float: left;
+}
+body.kiroletik div#content div.recording h3 a {
+    font-weight: normal;
+    color: #c92800;
+}
 .recording { margin: 0 0 2em 0; clear: both; }
     .recording .date { font-size: .6em; font-weight: bold; }
     .recording .section {

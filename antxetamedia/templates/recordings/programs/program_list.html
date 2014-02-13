@@ -29,9 +29,24 @@
 {% endfor %}
 
 
-{% for object in object_list %}
-{% include 'recordings/recording.html' with object=object detail=0 %}
-{% endfor %}
+<div class="programs">
+    {% for object in object_list %}
+    {% include 'recordings/recording.html' with object=object detail=0 %}
+    {% endfor %}
+</div>
+
+<div class="full_programs">
+    {% for object in full_programs %}
+    {% include 'recordings/recording.html' with object=object detail=0 %}
+    {% endfor %}
+</div>
+
+<div class="interviews">
+    {% for object in interviews %}
+    {% include 'recordings/recording.html' with object=object detail=0 %}
+    {% endfor %}
+</div>
+
 
 {% include 'paginator.html' %}
 {% endblock content %}
