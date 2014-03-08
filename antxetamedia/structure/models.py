@@ -54,7 +54,7 @@ class Node(models.Model):
             yield self
 
         node = self
-        while parent:
+        while node is not None:
             node = node.parent
             if node:
                 yield node

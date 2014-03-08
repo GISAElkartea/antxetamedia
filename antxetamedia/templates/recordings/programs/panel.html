@@ -12,7 +12,7 @@
     alt="feeds" /></a>
 {% endblock feeds %}
 
-{% block body-class %}{{ reason|lower }}{% endblock body-class %}
+{% block body-class %}{{ reason|lower }} {{ reason.ascendents|join:" "|lower }}{% endblock body-class %}
 
 {% block panel %}
 {{ reason.panel }}
