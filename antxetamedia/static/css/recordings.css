@@ -1,19 +1,6 @@
 #content div.full_programs, #content div.interviews {
     display: none;
 }
-body.kiroletik div#content div.recording {
-    width: 75%;
-}
-body.kiroletik div#content div.recording div.date {
-    color: #032737;
-}
-body.kiroletik div#content div.recording div.section {
-    float: left;
-}
-body.kiroletik div#content div.recording h3 a {
-    font-weight: normal;
-    color: #c92800;
-}
 .recording { margin: 0 0 2em 0; clear: both; }
     .recording .date { font-size: .6em; font-weight: bold; }
     .recording .section {
@@ -62,3 +49,106 @@ body.kiroletik div#content div.recording h3 a {
     .tagcloud .tag-3 { font-size: 1em; }
     .tagcloud .tag-2 { font-size: .6em; }
     .tagcloud .tag-1 { font-size: .5em; }
+
+body.kiroletik div#content div.recording {
+    width: 75%;
+}
+body.kiroletik div#content div.recording div.date {
+    color: #032737;
+}
+body.kiroletik div#content div.recording div.section {
+    float: left;
+}
+body.kiroletik div#content div.recording h3 a {
+    font-weight: normal;
+    color: #c92800;
+}
+body.kiroletik div.full_programs, body.kiroletik #content div.interviews {
+    display: inline-block !important;
+    vertical-align: top;
+}
+body.kiroletik div.programs {
+    display: none;
+}
+body.kiroletik div#node {
+    width: 100%;
+    margin-bottom: 2em;
+}
+body.kiroletik div#node h3 {
+    display: inline-block;
+    float: none;
+    font-size: .8em;
+    padding: .25em;
+    margin: 0;
+    background: #C92800;
+    border: none;
+    font-weight: normal;
+}
+body.kiroletik div#node h3 a {
+    color: #f9f9f9;
+    margin: 0;
+}
+body.kiroletik div.full_programs {
+    width: 25%;
+    margin-right: 5%;
+}
+    body.kiroletik div.full_programs div.recording {
+        background: -webkit-linear-gradient(#ececec, #cccccc);
+        background: -o-linear-gradient(#ececec, #cccccc);
+        background: -moz-linear-gradient(#ececec, #cccccc);
+        background: linear-gradient(#ececec, #cccccc);
+        border: #b8b8b8 solid .1em;
+        padding: .3em;
+        margin-bottom: 1.5em;
+    }
+    body.kiroletik div.full_programs div.recording h3 {
+        font-size: .9em;
+        margin: 0;
+        width: 70%;
+        display: inline-block;
+    }
+    body.kiroletik div.full_programs div.recording h3 a {
+        color: #032737 !important;
+    }
+    body.kiroletik div.full_programs div.recording div.play {
+        width: 25%;
+        float: none;
+        display: inline-block;
+    }
+    body.kiroletik div.full_programs div.recording div.play img {
+        float: none;
+        width: 40% !important;
+        margin: 0
+    }
+    body.kiroletik div.full_programs div.recording div.date, body.kiroletik div.full_programs div.recording div.section, body.kiroletik div.full_programs div.recording > img, body.kiroletik div.full_programs div.recording p {
+        display: none;
+    }
+       
+body.kiroletik div.interviews {
+    width: 69%;
+}
+    body.kiroletik div.interviews div.recording {
+        border-bottom: .1em #032737 solid;
+        margin-bottom: 3em;
+        padding-bottom: 1em;
+    }
+body.kiroletik div.recording {
+    width: 100% !important;
+}
+    body.kiroletik div.recording div.section {
+        float: none !important;
+        border: none;
+        padding: 0;
+        margin: .2em 0;
+    }
+        body.kiroletik div.recording div.section a {
+            font-variant: small-caps;
+            text-transform: lowercase;
+            color: #032737;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    body.kiroletik div.recording p.more {
+        display: none;
+    }
+
