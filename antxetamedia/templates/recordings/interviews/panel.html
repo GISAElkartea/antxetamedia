@@ -17,3 +17,9 @@
 {% block panel %}
 {{ reason.panel }}
 {% endblock panel %}
+
+{% if reason.header %}
+{% block banner %}
+{{ reason.header.url }}
+{% endblock banner %}
+{% endif %}

@@ -13,8 +13,10 @@ class NodeAdmin(admin.ModelAdmin):
 
     fieldsets = (
             (None, {
-                'fields': (('name', 'on_menu', 'on_frontpage'), 'parent')}),
+                'fields': (('name', 'parent'),)}),
             (_('Details'), {
-                'fields': ('description', 'link', 'image', 'panel')}),
+                'fields': ('description', 'link', 'image')}),
+            (_('Positioning'), {
+                'fields': ('on_menu', 'on_frontpage', 'panel', 'header')}),
             )
 admin.site.register(Node, NodeAdmin)

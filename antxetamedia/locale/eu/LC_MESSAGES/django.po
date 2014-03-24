@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-26 19:41+0100\n"
+"POT-Creation-Date: 2014-03-24 18:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,13 +124,13 @@ msgid "place"
 msgstr "tokia"
 
 #: agenda/models.py:48 misc/models.py:93 projects/models.py:19
-#: recordings/models.py:48 structure/models.py:30
+#: recordings/models.py:48 structure/models.py:32
 msgid "image"
 msgstr "irudia"
 
 #: agenda/models.py:49 misc/models.py:42 misc/models.py:45
 #: multimedia/models.py:30 programming/models.py:46 recordings/models.py:47
-#: structure/models.py:29
+#: structure/models.py:31
 msgid "link"
 msgstr "lotura"
 
@@ -283,7 +283,7 @@ msgstr "media"
 msgid "medias (audio: MP3 | video: FLV,MP4,H.264)"
 msgstr "mediak (audioa: MP3 | bideoa: FLV,MP4,H.264)"
 
-#: multimedia/models.py:59 recordings/models.py:57 recordings/models.py:99
+#: multimedia/models.py:59 recordings/models.py:57 recordings/models.py:101
 msgid "title"
 msgstr "izenburua"
 
@@ -395,31 +395,31 @@ msgstr "berria"
 msgid "news"
 msgstr "berriak"
 
-#: recordings/models.py:95 recordings/models.py:107
+#: recordings/models.py:97 recordings/models.py:109
 msgid "program"
 msgstr "irratsaioa"
 
-#: recordings/models.py:96
+#: recordings/models.py:98
 msgid "programs"
 msgstr "irratsaioak"
 
-#: recordings/models.py:100
+#: recordings/models.py:102
 msgid "Left empty if full program"
 msgstr "Hutsik utzi saio osoa bada"
 
-#: recordings/models.py:102
+#: recordings/models.py:104
 msgid "type"
 msgstr "mota"
 
-#: recordings/models.py:103
+#: recordings/models.py:105
 msgid "interview"
 msgstr "elkarrizketa"
 
-#: recordings/models.py:104
+#: recordings/models.py:106
 msgid "full program"
 msgstr "saio osoa"
 
-#: recordings/models.py:125
+#: recordings/models.py:127
 msgid "You must set a title for an interview"
 msgstr "Elkarrizketa baterako izenburua behar da"
 
@@ -456,6 +456,10 @@ msgstr "Non?"
 msgid "Search"
 msgstr "Bilatu"
 
+#: structure/admin.py:19
+msgid "Positioning"
+msgstr "Posizionatzea"
+
 #: structure/models.py:19
 msgid "node"
 msgstr "nodoa"
@@ -468,15 +472,19 @@ msgstr "nodoak"
 msgid "panel"
 msgstr "panela"
 
-#: structure/models.py:26
+#: structure/models.py:25
+msgid "header"
+msgstr "goiburua"
+
+#: structure/models.py:28
 msgid "on menu"
 msgstr "menuan"
 
-#: structure/models.py:27
+#: structure/models.py:29
 msgid "on frontpage"
 msgstr "portadan"
 
-#: structure/models.py:35
+#: structure/models.py:37
 msgid "parent"
 msgstr "gurasoa"
 
@@ -499,15 +507,15 @@ msgstr ""
 msgid "Last minute"
 msgstr "Azken ordua"
 
-#: templates/base.html:101
+#: templates/base.html:102
 msgid "Listen live!"
 msgstr "Entzun zuzenean!"
 
-#: templates/base.html:110
+#: templates/base.html:114
 msgid "There is no content"
 msgstr "Ez dago edukirik"
 
-#: templates/base.html:129
+#: templates/base.html:133
 msgid ""
 "\n"
 "                Brought to you by <a href=\"http://gisa-elkartea.org/\">GISA "
@@ -519,7 +527,7 @@ msgstr ""
 "eskutik\n"
 "                "
 
-#: templates/base.html:135
+#: templates/base.html:139
 msgid "Source code"
 msgstr "Iturburu kodea"
 

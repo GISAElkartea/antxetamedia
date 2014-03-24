@@ -255,14 +255,6 @@ body.kiroletik > div#wrap {
     background: #f9f9f9;
     position: relative;
 }
-body.kiroletik div#header {
-    background-image: url('img/atletismoa.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-    body.kiroletik div#header img#banner {
-        opacity: 0;
-    }
 body.kiroletik div#menu ul {
     background: #032737;
 }

@@ -72,7 +72,7 @@
 
             <div id="header">
                 <h1><a href="/">
-                    <img id="banner" src="{{ banner.image.url }}"
+                    <img id="banner" src="{% block banner %}{{ banner.image.url }}{% endblock banner %}"
                         alt="{{ banner.name }}"/>
 
                     {% if banner.with_logo %}
