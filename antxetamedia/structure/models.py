@@ -22,7 +22,8 @@ class Node(models.Model):
     name = models.CharField(_('name'), max_length=100, unique=True)
     description = MarkupField(_('description'), default='', blank=True)
     panel = MarkupField(_('panel'), default='', blank=True)
-    header = models.ImageField(_('header'), blank=True, upload_to='img')
+    header = models.ImageField(_('header'), blank=True, null=True,
+                               upload_to='img')
 
     on_menu = models.BooleanField(_('on menu'), default=False)
     on_frontpage = models.BooleanField(_('on frontpage'), default=False)

@@ -18,8 +18,10 @@
 {{ reason.panel }}
 {% endblock panel %}
 
-{% if reason.header %}
 {% block banner %}
+{% if reason.header %}
 {{ reason.header.url }}
-{% endblock banner %}
+{% else %}
+{{ block.super }}
 {% endif %}
+{% endblock banner %}

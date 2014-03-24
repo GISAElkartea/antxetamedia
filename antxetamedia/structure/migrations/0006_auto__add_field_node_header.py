@@ -10,7 +10,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         # Adding field 'Node.header'
         db.add_column(u'structure_node', 'header',
-                      self.gf('django.db.models.fields.files.ImageField')(default='', max_length=100, blank=True),
+                      self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True),
                       keep_default=False)
 
 
@@ -25,7 +25,7 @@ class Migration(SchemaMigration):
             '_description_rendered': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
             '_panel_rendered': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
             'description': ('markitup.fields.MarkupField', [], {'default': "''", 'no_rendered_field': 'True', 'blank': 'True'}),
-            'header': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'blank': 'True'}),
+            'header': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'image': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'blank': 'True'}),
             'link': ('django.db.models.fields.URLField', [], {'max_length': '200', 'blank': 'True'}),
