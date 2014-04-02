@@ -8,11 +8,23 @@ body {
 a { color: #37538c; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-div.play { float: left; }
+div.play { 
+    float: left; 
+    width: 100%;
+    border: .1em solid #2F3841;
+}
+div.play h6 { 
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 0 1em;
+    vertical-align: middle;
+    color: #2F3841;
+}
 a.play img, a.download img {
-    float: left;
-    margin: .5em .2em 0 0;
+    display: inline-block;
+    padding: .5em 0 .5em .5em;
     width: 2em !important;
+    vertical-align: middle;
 }
 
 img { border: 0; }
