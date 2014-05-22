@@ -19,7 +19,6 @@ div.projects > h3 > a {
 
 div.project {
     font-size : .9em;
-    line-height: 2em;
 }
 div.project h1:first-child {
     font-size: 1.5em;
@@ -39,9 +38,6 @@ div.project h3 {
 div.project h4 {
     color: black;
     font-size: 1.1em;
-}
-div.project p {
-    clear: both;
 }
 div.project img {
     margin: 1em 1em 1em 0;
