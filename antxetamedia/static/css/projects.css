@@ -15,8 +15,6 @@ div.projects > h3 > a {
     color: #BAC7D4;
     font-size: .7em;
 }
-
-
 div.project {
     font-size : .9em;
 }
@@ -43,4 +41,7 @@ div.project img {
     margin: 1em 1em 1em 0;
     float: left;
     max-width: 100%;
+}
+div.project iframe {
+    width: 100%;
 }
