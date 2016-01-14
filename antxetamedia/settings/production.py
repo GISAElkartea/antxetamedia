@@ -11,8 +11,9 @@ SEND_BROKEN_LINK_EMAILS = False
 
 SECRET_KEY = env['SECRET_KEY']
 ALLOWED_HOSTS = [
-                'antxetamedia.info', 
+                'antxetamedia.info',
                 'www.antxetamedia.info',
+                'iragana.antxetamedia.info',
                 'antxetairratia.com',
                 'www.antxetairratia.com',
                 ]
