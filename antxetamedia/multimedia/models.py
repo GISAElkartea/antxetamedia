@@ -66,7 +66,7 @@ class Media(models.Model):
 
     remote = models.CharField(max_length=300, editable=False, null=True, blank=True)
     local = models.FileField(_('file'), upload_to='medias', blank=True, null=True,
-            help_text=_('Blank if synchronized'))
+            max_length=1024, help_text=_('Blank if synchronized'))
 
     content_type = models.ForeignKey(ContentType, null=True)
     object_id = models.PositiveIntegerField(null=True)
