@@ -1,8 +1,10 @@
+from __future__ import unicode_literals
+
 from django.db import models
 from django.contrib.contenttypes import generic
 from django.utils.translation import ugettext as _
 from django.core.validators import ValidationError
-from django.utils.encoding import smart_str
+from django.utils.six import text_type
 
 from markitup.fields import MarkupField
 from autoslug.fields import AutoSlugField
@@ -82,10 +84,10 @@ class News(Recording):
 
     def metadata(self):
         return {
-                'x-archive-meta-title': smart_str(self),
+                'x-archive-meta-title': text_type(self),
                 'x-archive-meta-creator': 'Berriak',
-                'x-archive-meta-description': smart_str(self.text.raw),
-                'x-archive-meta-subject': smart_str(self),
+                'x-archive-meta-description': text_type(self.text.raw),
+                'x-archive-meta-subject': text_type(self),
                 'x-archive-meta-date': self.pub_date.strftime('%Y-%m-%d'),
                 }
 
@@ -141,9 +143,9 @@ class Program(Recording):
 
     def metadata(self):
         return {
-                'x-archive-meta-title': smart_str(self),
-                'x-archive-meta-creator': smart_str(self.program),
-                'x-archive-meta-description': smart_str(self.text.raw),
-                'x-archive-meta-subject': smart_str(self),
+                'x-archive-meta-title': text_type(self),
+                'x-archive-meta-creator': text_type(self.program),
+                'x-archive-meta-description': text_type(self.text.raw),
+                'x-archive-meta-subject': text_type(self),
                 'x-archive-meta-date': self.pub_date.strftime('%Y-%m-%d'),
                 }

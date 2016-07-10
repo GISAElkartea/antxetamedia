@@ -128,8 +128,8 @@ SSL_URLS = ()
 #S3
 S3_HOST = 's3.us.archive.org'
 S3_METADATA = {
-        'x-archive-meta-mediatype': 'audio',
-        'x-archive-meta-collection': 'opensource_audio',
+        'x-archive-meta-mediatype': u'audio',
+        'x-archive-meta-collection': u'opensource_audio',
         }
 
 MARKITUP_FILTER = ('markdown.markdown', {})
