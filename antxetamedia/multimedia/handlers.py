@@ -15,8 +15,6 @@ def upload(user, passwd, bucket, metadata, key, fd):
     except S3ResponseError:
         try:
             bucket = conn.create_bucket(bucket, headers=metadata)
-        except (S3ResponseError, UnicodeDecodeError):
-            bucket = conn.create_bucket(bucket)
         except S3CreateError as e:
             if e.status == 409:
                 bucket = Bucket(conn, bucket)
