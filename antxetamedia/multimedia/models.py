@@ -9,7 +9,7 @@ from django.core.files.temp import NamedTemporaryFile
 from django.core.files import File
 
 from urllib2 import urlopen
-from os.path import join, basename, splitext
+from os.path import basename, splitext
 from itertools import chain
 from operator import attrgetter
 
@@ -61,7 +61,7 @@ class Media(models.Model):
     account = models.ForeignKey(Account)
 
     synchronize = models.BooleanField(_('mark for synchronization'), default=True)
-    is_synchronized = models.BooleanField(_('synchronization state'), 
+    is_synchronized = models.BooleanField(_('synchronization state'),
             default=False)
 
     remote = models.CharField(max_length=300, editable=False, null=True, blank=True)
@@ -105,7 +105,7 @@ class Media(models.Model):
         self.upload()
         if self.is_synchronized and self.local:
             self.local.delete()
-        
+
     def get_sync_data(self):
         data = {
                 'user': self.account.user,
@@ -121,6 +121,7 @@ class Media(models.Model):
         else:
             data['bucket'] = 'antxeta'
             data['metadata']['x-archive-meta-title'] = 'Antxeta'
+        data['metadata'] = {k: 'uri({})'.format(v) for k, v in data['metadata'].items()}
         data['key'] = '{0}-{1}{2}'.format(
                 data['bucket'], self.pk, splitext(self.local.name)[1])
         return data
