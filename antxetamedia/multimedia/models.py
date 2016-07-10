@@ -123,6 +123,7 @@ class Media(models.Model):
         else:
             data['bucket'] = 'antxeta'
             data['metadata']['x-archive-meta-title'] = 'Antxeta'
+        data['bucket'] = '{}-{}'.format(self.account.user.lower(), data['bucket'])
         data['metadata'] = dict(((k, 'uri({})'.format(v)) for k, v in data['metadata'].items()))
         data['key'] = '{0}-{1}{2}'.format(
                 data['bucket'], self.pk, splitext(self.local.name)[1])
