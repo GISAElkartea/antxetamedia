@@ -1,8 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.core.mail import mail_admins
 
-from haystack import site
-
 from antxetamedia.multimedia.models import Media
 
 
