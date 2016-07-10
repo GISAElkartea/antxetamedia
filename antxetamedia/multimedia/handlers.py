@@ -18,11 +18,9 @@ def upload(user, passwd, bucket, metadata, key, fd):
         except S3CreateError as e:
             if e.status == 409:
                 bucket = Bucket(conn, bucket)
+            else:
+                raise
 
     key = bucket.new_key(key)
-    try:
-        key.set_contents_from_file(fd)
-    except S3ResponseError:
-        key.set_contents_from_file(fd)
-
+    key.set_contents_from_file(fd)
     return key.generate_url(0).split('?')[0]
