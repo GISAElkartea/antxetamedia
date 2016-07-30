@@ -3,6 +3,7 @@ from datetime import date
 from django.db import models
 from django.utils.translation import ugettext as _
 from django.contrib.contenttypes import generic
+from django.utils.six import text_type
 
 from autoslug.fields import AutoSlugField
 from markitup.fields import MarkupField
@@ -30,3 +31,12 @@ class Project(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def metadata(self):
+        return {
+                'x-archive-meta-title': text_type(self),
+                'x-archive-meta-creator': text_type('Antxeta Irratia'),
+                'x-archive-meta-description': text_type(self.text.raw),
+                'x-archive-meta-subject': text_type(self),
+                'x-archive-meta-date': self.beginning.strftime('%Y-%m-%d'),
+                }
