@@ -15,8 +15,6 @@ from os.path import basename, splitext
 from itertools import chain
 from operator import attrgetter
 
-from antxetamedia.multimedia.handlers import upload
-
 
 def get_orphaned_media():
     embeded = EmbededMedia.objects.filter(content_type__isnull=True).iterator()
@@ -94,19 +92,6 @@ class Media(models.Model):
             temp.flush()
             self.local.name = basename(self.remote)
             self.local.storage.save(basename(self.remote), File(temp))
-
-    def upload(self):
-        uri = upload(fd=self.local.file, **self.get_sync_data())
-        if uri:
-            self.is_synchronized = True
-            self.remote = uri
-        else:
-            self.is_synchronized = False
-
-    def sync(self):
-        self.upload()
-        if self.is_synchronized and self.local:
-            self.local.delete()
 
     def get_sync_data(self):
         data = {
