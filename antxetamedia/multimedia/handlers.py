@@ -8,7 +8,7 @@ from django.conf import settings
 def upload(user, passwd, bucket, metadata, key, fd):
     conn = S3Connection(user, passwd, host=settings.S3_HOST, is_secure=False)
 
-    bucket.stip('-')
+    bucket.strip('-')
     try:
         bucket = conn.create_bucket(bucket, headers=metadata)
     except S3CreateError as e:
