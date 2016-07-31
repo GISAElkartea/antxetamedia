@@ -106,7 +106,7 @@ class Media(models.Model):
             data['bucket'] = slugify(self.title)
             data['metadata']['x-archive-meta-title'] = self.title
         else:
-            data['bucket'] = 'antxeta'
+            data['bucket'] = self.pk
             data['metadata']['x-archive-meta-title'] = 'Antxeta'
             data['bucket'] = '{}-{}'.format(self.account.user.lower(), data['bucket'])[:50]
         data['metadata'] = dict(((k, 'uri({})'.format(v)) for k, v in data['metadata'].items()))
