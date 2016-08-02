@@ -13,7 +13,12 @@ class Command(BaseCommand):
             if media.local:
                 print 'Syncing {0}...'.format(media.related_object or media),
                 try:
-                    uri = upload(fd=media.local.file, **media.get_sync_data())
+                    uri = upload(user=media.account.user,
+                                 passwd=media.account.password,
+                                 bucket=media.bucket_name,
+                                 metadata=media.metadata,
+                                 key=media.key_name,
+                                 fd=media.local.file)
                     if uri:
                         media.is_synchronized = True
                         media.remote = uri

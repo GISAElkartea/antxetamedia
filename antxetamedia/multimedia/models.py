@@ -93,26 +93,28 @@ class Media(models.Model):
             self.local.name = basename(self.remote)
             self.local.storage.save(basename(self.remote), File(temp))
 
-    def get_sync_data(self):
-        data = {
-                'user': self.account.user,
-                'passwd': self.account.password,
-                'metadata': settings.S3_METADATA,
-                }
+    @property
+    def bucket_name(self):
         if self.related_object:
-            data['bucket'] = self.related_object.slug
-            data['metadata'].update(self.related_object.metadata())
+            bucket = self.related_object.slug
         elif self.title:
-            data['bucket'] = slugify(self.title)
-            data['metadata']['x-archive-meta-title'] = self.title
+            bucket = slugify(self.title)
         else:
-            data['bucket'] = self.pk
-            data['metadata']['x-archive-meta-title'] = 'Antxeta'
-            data['bucket'] = '{}-{}'.format(self.account.user.lower(), data['bucket'])[:50]
-        data['metadata'] = dict(((k, 'uri({})'.format(v)) for k, v in data['metadata'].items()))
-        data['key'] = '{0}-{1}{2}'.format(
-                data['bucket'], self.pk, splitext(self.local.name)[1])
-        return data
+            bucket = self.pk
+        return '{}-{}'.format(self.account.user.lower(), bucket)[:50]
+
+    @property
+    def metadata(self):
+        metadata = settings.S3_METADATA
+        if self.related_object:
+            metadata.update(self.related_object.metadata())
+        if self.title:
+            metadata['x-archive-meta-title'] = self.title
+        return dict(((k, 'uri({})'.format(v)) for k, v in metadata.items()))
+
+    @property
+    def key_name(self):
+        return '{0}-{1}{2}'.format(self.bucket_name, self.pk, splitext(self.local.name)[1])
 
     def save(self, *args, **kwargs):
         if self.local:
