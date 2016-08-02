@@ -96,12 +96,10 @@ class Media(models.Model):
     @property
     def bucket_name(self):
         if self.related_object:
-            bucket = self.related_object.slug
-        elif self.title:
-            bucket = slugify(self.title)
-        else:
-            bucket = self.pk
-        return '{}-{}'.format(self.account.user.lower()[:5], bucket)
+            return self.related_object.slug
+        if self.title:
+            return slugify(self.title)
+        return self.pk
 
     @property
     def metadata(self):
