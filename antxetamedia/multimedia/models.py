@@ -108,7 +108,8 @@ class Media(models.Model):
             metadata.update(self.related_object.metadata())
         if self.title:
             metadata['x-archive-meta-title'] = self.title
-        return dict(((k, 'uri({})'.format(v)) for k, v in metadata.items()))
+        return dict(((k, 'uri({})'.format(v)) for k, v in metadata.items()
+                     if k not in ['x-archive-meta-mediatype', 'x-archive-meta-collection']))
 
     @property
     def key_name(self):
