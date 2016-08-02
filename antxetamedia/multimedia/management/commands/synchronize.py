@@ -11,8 +11,8 @@ class Command(BaseCommand):
         for media in Media.objects.order_by('-pk').filter(
                 synchronize=True, is_synchronized=False).iterator():
             if media.local:
-                bucket = media.bucket_name
                 for retry in range(1, 5):
+                    bucket = '{}-{}'.format(media.bucket_name, retry)
                     print('\nSyncing {}...'.format(bucket))
                     try:
                         uri = upload(user=media.account.user,
@@ -29,6 +29,5 @@ class Command(BaseCommand):
                             media.remote = uri
                             media.save()
                             print('OK')
-                            continue
+                            break
                         print('Failed')
-                    bucket = '{}-{}'.format(bucket, retry)
