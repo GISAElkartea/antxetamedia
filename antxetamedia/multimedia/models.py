@@ -96,9 +96,9 @@ class Media(models.Model):
     @property
     def bucket_name(self):
         if self.related_object:
-            return self.related_object.slug
+            return self.related_object.slug[:30]
         if self.title:
-            return slugify(self.title)
+            return slugify(self.title)[:30]
         return self.pk
 
     @property
