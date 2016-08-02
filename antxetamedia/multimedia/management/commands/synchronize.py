@@ -11,7 +11,7 @@ class Command(BaseCommand):
         for media in Media.objects.order_by('-pk').filter(
                 synchronize=True, is_synchronized=False).iterator():
             if media.local:
-                print 'Syncing {0}...'.format(media.related_object or media),
+                print 'Syncing {0}...'.format(media.bucket_name)
                 try:
                     uri = upload(user=media.account.user,
                                  passwd=media.account.password,

@@ -101,7 +101,7 @@ class Media(models.Model):
             bucket = slugify(self.title)
         else:
             bucket = self.pk
-        return '{}-{}'.format(self.account.user.lower(), bucket)[:50]
+        return '{}-{}'.format(self.account.user.lower()[:5], bucket)
 
     @property
     def metadata(self):
